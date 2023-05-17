@@ -1,0 +1,52 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "348b04ea17f646fbc6a46e20ebe4fe12",
+      "css": "download",
+      "code": 61486,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "4f3b31017c63ba04dc4f78ce7a8f02b1",
+      "css": "upload",
+      "code": 61487,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "8f47f269b2667fb9b661e950a9599e26",
+      "css": "puzzle-outline",
+      "code": 59393,
+      "src": "typicons"
+    },
+    {
+      "uid": "xoidjr6q3rzi7tpw6hci1k6srz15g11l",
+      "css": "puzzle",
+      "code": 59394,
+      "src": "typicons"
+    },
+    {
+      "uid": "9c7fd7637a41b59a358cb70893f945a5",
+      "css": "rocket",
+      "code": 59392,
+      "src": "entypo"
+    },
+    {
+      "uid": "414fe97e4af5215a06d29be0f2cecdf5",
+      "css": "network",
+      "code": 59395,
+      "src": "entypo"
+    },
+    {
+      "uid": "84a7262985600b683bbab0da9298776d",
+      "css": "signal",
+      "code": 59396,
+      "src": "entypo"
+    }
+  ]
+}

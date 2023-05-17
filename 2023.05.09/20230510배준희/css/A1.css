@@ -1,0 +1,114 @@
+@charset "utf-8";
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    outline-style: none;
+}
+ul{
+    list-style: none;
+}
+a{
+    color:white;
+    /* display: block; */
+    text-decoration: none;
+}
+img{
+    border: 0;
+    vertical-align: middle;
+}
+html{
+    font-size: 16px;
+}
+body{
+    width: 1200px;
+    /* font-family: ; */
+    font-size: 13px;
+    /* color: #777; */
+    line-height: 1.6;
+    letter-spacing: -0.3px;
+    word-break: keep-all;
+}
+#container{
+    width: 1200px;
+    background-color: #777;
+}
+/* 기본 세팅 끝, 헤더 시작 */
+header{
+    /* width: 1200px; */
+    height: 100px;
+    background-color: cadetblue;
+}
+.logo{
+    float: left;
+    width: 250px;
+    height: 80px;
+    padding-left: 20px;
+    line-height: 100px;
+}
+.logo  h1{
+    margin-left: 20px;
+    font-weight: 900;
+    font-size: 30px;
+}
+nav{
+    float: right;
+    width: 900px;
+    height: 40px;
+}
+.topmeun{
+    width: 800px;
+    margin: 0 auto;
+    height: 100px;
+    font-size: 20px;
+}
+.topmeun > li{
+    float: left;
+}
+.topmeun > li > a{
+    display: block;
+}
+/* 헤더 끝 메인 시작 */
+.contents{
+    width: 1000px;
+    height: 1000px;
+    margin: 50px auto;
+}
+.sectid{
+    height: 350px;
+}
+main h2{
+    line-height: 50px;
+    display: block;
+    font-size: 50px;
+    color: white;
+    float: right;
+    margin-bottom: 20px;
+}
+.T1>img{
+    width: 350px;
+    height: 350px;
+    float: left;
+}
+main li{
+    font-size: 15px;
+}
+main h3{
+    /* font-family: ; */
+    font-size: 25px;
+}
+main div{
+    margin-top: 20px;
+}
+.detail p{
+    font-size: 15px;
+    /* color: #777; */
+    line-height: normal 36px;
+}
+.detail >img{
+    /* margin: 5px; */
+    /* border-radius: 20px; */
+    width: 350px;
+    height: 350px;
+    float: right;
+}

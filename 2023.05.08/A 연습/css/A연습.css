@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 박스 사이즈를 마진을 신경 쓰지말라 */
+}
+a{
+    text-decoration: none;
+    /* 텍스트 아래 줄생기는것을 하지 말라 */
+}
+ul{
+    list-style: none;
+    /* ul 앞에 생기는 점을 안나오게 하라 */
+}
+#container{
+    width: 1200px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+    /* container = 가장 큰것
+    가로 사이즈 1200px
+    마진 0 오토
+    백그라운드 컬러 */
+}
+/* 상단 */

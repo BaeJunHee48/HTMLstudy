@@ -1,0 +1,174 @@
+@charset "UTF-8";
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* a{
+    list-style: none;
+} */
+.container{
+    height: 800px;
+    width: 960px;
+    margin: 0 auto;
+}
+.navi{
+    width: 960px;
+    height: 60px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ccc
+}
+.navi ul{
+    /* margin: 0 auto; */
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background-color: antiquewhite;
+}
+.navi ul li{
+    display: inline-block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    /* background-color: aquamarine; */
+    text-align: center;
+}
+.navi a:link, .navi a:visited{
+    font-size: 14px;
+    padding: 10px;
+    text-decoration: none;
+}
+.navi a:hover, .navi a:focus{
+    background-color: black;
+    color: white;
+}
+.navi a:active{
+    background-color: red;
+}
+.contents{
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 50px auto;
+}
+.contents :nth-child(3){
+    background-color: blueviolet;
+}
+.contents h2:nth-of-type(3){
+    background-color: red;
+}
+
+/* 열에 번갈아 가며 배경색 적용 하기 */
+/* 수식을 사용해 위치 지정하기 */
+#container{
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    /* display: inline-block; */
+    color: black;
+    border: 1px solid black;
+    /* background-color: antiquewhite; */
+}
+/* table, td, tr{
+    border-collapse: 1px ;
+} */
+table{
+    background-color: #ccc;
+    width: 200px;
+    margin: 0 auto;
+    /* border-collapse: 3px collapse #0400ff ; */
+}
+td{
+    text-align: left;
+    padding: 10px;
+}
+/* table tr:nth-of-type(2n){
+    background-color: #ccc;
+} */
+table tr:nth-of-type(2n+1){
+    background-color: red;
+}
+
+table tr:nth-last-of-type(2n){
+    background-color: aquamarine;
+}
+.container2{
+    width: 960px;
+    height: 0 auto;
+}
+.container2 ul li {
+    margin: 15px;
+}
+.container2 ul li.new::after{
+    content: "HELLO";
+    font-size:  x-small;
+    padding: 2px 4px;
+    margin: 0 10px ;
+    background-color: blue;
+    border-radius: 2px;
+    color: white;
+}
+.container2 ul li.hi::after{
+    content: "잠온다";
+    font-size: small;
+    padding: 2px 5px;
+    margin: 0 10px;
+    background-color: antiquewhite;
+    color: brown;
+}
+
+
+
+
+
+
+/* *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: "맑은고딕";
+    color: #222222;
+}
+a{
+    text-decoration: none;
+    font-size: 40px;
+}
+.container{
+    width: 1800px;
+    margin: 0 auto;
+}
+.navi{
+    font-weight: 900;
+    background-color: antiquewhite;
+    text-align: center;
+}
+ul{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;    
+}
+li{
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+}
+.contents{
+    border: 1px solid black;
+    border-radius: 30px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 800px; 
+}
+h2{
+    margin: 25px;
+}
+p{
+    margin: 10px;
+} */

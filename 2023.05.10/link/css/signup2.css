@@ -1,0 +1,119 @@
+@charset "utf-8";
+*{
+    /* margin: 0; */
+    /* padding: 0; */
+    box-sizing: border-box;
+    outline: none;
+}
+ul{
+    /* list-style: none; */
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+/* 기본 세팅 */
+header{
+    border-bottom: 3px solid #777 ;
+    /* text-align: center; */
+    margin: 0 auto;
+    width: 1000px;
+    height: 100px;
+    /* background-color: antiquewhite; */
+}
+.A{
+    margin: 0 auto;
+    text-align: center;
+}
+ul a:link, ul a:visited{
+font-size: 20px;
+color: black;
+    padding: 10px;
+    display: block;
+    font-weight: 800;
+    /* background-color: antiquewhite; */
+}
+ul a:hover, ul a:focus{
+    background-color: #777;
+    color: white;
+}
+.B{
+    /* font-size: 20px; */
+    display: inline-block;
+    margin-top: 20px;
+    /* float: left; */
+    width: 200px;
+    padding: 5px;
+    /* height: 100px; */
+}
+ul a:active{
+    background-color: red;
+}
+#signup{
+    margin: 50px auto;
+    width: 400px;
+    /* background-color:beige; */
+    padding: 20px;
+    border: 3px solid #777;
+    border-radius: 20px ;
+}
+#signup >fieldset{
+    /* background-color:aliceblue; */
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+#signup legend{
+    /* text-align: center; */
+    font-weight: 800;
+    font-size: 20px;
+    padding: 0 15px;
+}
+#signup ul li{
+    list-style: none;
+    /* line-height: 25px; */
+    padding: 5px 10px;
+    margin-bottom: 2px;
+}
+#signup button{
+    padding: 7px 25px;
+    border-radius: 25px;
+    color: gold;
+    background-color: #777777a6;
+    /* width: 0; */
+    margin: auto;
+    display: block;
+    font-size: 16px;
+    font-weight: 150px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#signup fieldset:first-of-type label{
+    /* background-color: aquamarine; */
+    font-size: 13px;
+    width: 60px;
+    float: left;
+    /* margin: 0 auto; */
+}
+/* ------------------같은거-------------------- */
+
+/* #signup input[type=text],input[type=tel]{
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 200px;
+    border-radius: 5px;
+} */
+#signup input:not([type=radio]){
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 200px;
+    border-radius: 5px;
+}
+/* ------------------------------------------ */
+#signup input:not([type=radio]):hover{
+    border-color: crimson;
+    border-width: 2px;
+}
+#signup input:checked+label{
+    color:crimson;
+    font-weight: bold;
+}
+

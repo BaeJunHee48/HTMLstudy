@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+
+h1{
+    width: 700px;
+    margin: 10px auto;
+    text-align: center;
+    color: rgb(28, 233, 233);
+    /* background-color: black; */
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.164)
+
+
+
+}
+nav{
+    background-color: aquamarine;
+    width: 1500px;
+    height: 200;
+    margin: 10px auto;
+}
+a{
+    text-decoration: none;
+    color: brown;
+    font-size: 25px;
+    font-weight: bold ;
+    margin: 10px auto;
+}
+ul{
+    display: block;
+    list-style-image: url(../images/dot.png);
+    width: 1500px;   
+    padding: 0px;
+    text-align: center;
+    margin: 10px auto;
+
+}
+
+li{
+    display: inline-block;
+    border: 3px solid black;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.705) ;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    margin: 10px auto;
+}
+/* p{
+    line-height: 100%;
+    text-decoration: underline;
+    text-align: center;
+} */
+.tran1{
+    text-transform: capitalize;
+    letter-spacing: 5px;
+}
+.tran2{
+    text-transform: uppercase;
+}
+.tran3{
+    text-transform: lowercase;
+    letter-spacing: 8px;
+}

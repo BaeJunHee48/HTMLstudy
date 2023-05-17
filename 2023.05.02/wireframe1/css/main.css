@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.wrap{}
+.inner{
+    width: 1200px;
+    height: 700px;
+    background-color: rgb(0, 0, 0);}
+/* A(header) 영역 */
+img{
+    position: relative;
+    top: 000px;
+    left: 000px;
+}
+.head{}
+.logo1{background-color: rgb(91, 223, 240); float: left; width: 20%; height: 100px;}
+.menu{background-color: rgb(66, 179, 194); width: 80%; height: 100px;float: left;} 
+/* A(header) 영역 */
+/* B 영역 */
+.B2{background-color: aqua;}
+.slide{background-color: antiquewhite; width: 100%; height: 150px;}
+.slide2{background-color: rgb(244, 253, 223);width: 100%; height: 150px;}
+/* B 영역 */
+/* C 영역 */
+.contert{background-color: azure;}
+.gallery{background-color: rgb(245, 182, 198);float: left; width: 30%; height: 200px;}
+.banner{position: relative;
+    background-color: rgb(157, 160, 139);float: left;  width: 40%; height: 200px;}
+.Link{background-color: rgb(172, 212, 107); width: 30%; height: 200px;float: left;}
+/* C 영역 */
+/* F(footer) 영역 */
+.footer{background-color: blueviolet;}
+.logo2{background-color: rgb(222, 247, 234); float: left; width: 20%; height: 100px;}
+.Copyright{background-color: rgb(91, 240, 178); float: left; width: 70%; height: 100px;}
+.SNS{background-color: rgb(156, 255, 120); width: 10%; height: 100px;float: left;}

@@ -1,0 +1,128 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    color: #222;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+p{
+    color: white;
+    font-weight: 900;
+}
+img{
+    width: 250px;
+}
+header{
+    margin: 0 auto;
+    width: 1200px;
+    height: 100px;
+    background-color: antiquewhite;
+}
+.header{
+    width: 300px;
+    margin: 0 auto;
+    float: left;
+    line-height: 100px;
+    font-size: 25px;
+    margin-left: 30px;
+}     
+.back{
+    width: 1200px;
+    background-image: url(../images/ab7c9cda-2fca-4205-8d10-540f5851823f.jpg);
+    background-size: 1200px 100%  ;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+.dog-1{
+    margin: 0 auto;
+    width: 1200px;
+    
+    padding-top: 20px;
+}
+.dog-1 img{
+    margin: 50px;
+    height: 200px;
+    float: left;
+    border-radius: 100%;
+}
+.doge{
+    position: relative;
+
+}
+.img1{ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+
+}
+.dog-1:hover .img1{
+    display: block;
+}
+.dog-1 p{
+    margin-top: 50px;
+    padding: 50px;
+    display: inline-block;
+    /* float: left; */
+    width: 400px;
+    background-color: #81818180;
+}
+.dog-2{
+    margin: 0 auto;
+    width: 1200px;
+    height: 300px;
+    padding-top: 50px;
+}
+.dog-2 .dog3{
+    float: right;
+    height: 230px;
+    margin-right: 70px;
+    border-radius: 100%;
+}
+.dog-2 p{
+    margin-left: 300px;
+    padding: 50px;
+    display: inline-block;
+    /* float: left; */
+    width: 400px;
+    text-align: right;
+    background-color: #81818180;
+}
+.dog-4{
+    margin: 0 auto;
+    width: 1200px;
+    
+    padding-top: 20px;
+}
+.doge3{
+    padding-left: 40px ;
+    padding-bottom: 20px;
+    margin: 20px;
+    height: 200px;
+    float: left;
+    border-radius: 100%;
+}.dog-4 p{
+    margin-bottom: 50px;
+    padding: 50px;
+    display: inline-block;
+    /* float: left; */
+    width: 400px;
+    background-color: #81818180;
+}
+footer{
+    text-align: center;
+    width: 1200px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: rgb(27, 37, 34);
+}
+footer p{
+    font-size: 30px;
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+}
+

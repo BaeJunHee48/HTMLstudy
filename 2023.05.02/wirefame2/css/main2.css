@@ -1,0 +1,99 @@
+@charset "UTF-8";
+.WrapA{}
+.innerA{
+    width: 1200px;
+    height: 100px;
+    background-color: rgb(226, 168, 168); text-align: center; margin:0 auto}
+/* A영역 시작 */
+.head{
+    width: 100%;
+    height:100px;
+    background-color: rgb(215, 255, 242);}
+.logoA{
+    width: 30%;
+    height: 100px;
+    background-color: rgba(100, 233, 166, 0.952); float: left;
+    line-height: 100px;}
+.menuA{
+    width: 70%;
+    height: 100px;
+    background-color: rgb(188, 235, 161); float: left;
+    line-height: 100px;}
+/* A영역 끝, B-1영역 시작 */
+.img1{
+    width: 1200px; 
+    height: 150px;
+    background-color: rgba(163, 252, 252, 0.418);
+    line-height: 150px;}
+.slideA{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: rgb(185, 247, 226);}
+.TT2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    transform: translate(-50%,-50%);
+
+}
+/* B-1영역 끝, B-2영역 시작 */
+.img2{
+    width: 1200px;
+    height: 150px;
+    background-color: black;
+    line-height: 150px;}
+.slideB{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(150, 241, 199);}
+/* B-2영역 끝, C영역 시작 */
+.Cfo{
+    width: 1200px;
+    height: 200px;
+    background-color: rgb(255, 0, 0);}
+    
+.contentA{
+    width: 20%;
+    height: 200px;
+    background-color: rgb(165, 216, 250); float: left;
+    line-height: 200px;}
+.galleryA{
+    width: 50%;
+    height: 200px;
+    background-color: rgb(207, 181, 231);float: left;
+    line-height: 200px;
+    position: relative;}
+.galleryA >img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.bannerA{
+    width: 30%;
+    height: 200px;
+    background-color: rgb(202, 202, 226); float: left;
+    line-height: 200px;}
+/* C영역 끝, D영역 시작 */
+.footerA{
+    width: 1200px;
+    height: 100px;
+    background-color: darkmagenta;}
+.logoB{
+    width: 15%;
+    height: 100px;
+    background-color: rgba(137, 243, 243, 0.589);float: left;
+    line-height: 100px;}
+.copyrightA{
+    width: 60%;
+    height: 100px;
+    background-color: rgb(250, 212, 166); float: left;
+    line-height: 100px;}
+.familysite{
+    width: 25%;
+    height: 100px;
+    background-color: rgb(247, 187, 165); float: left;
+    line-height: 100px;}
+/* D영역 끝 */

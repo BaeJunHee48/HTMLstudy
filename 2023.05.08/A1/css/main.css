@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+body{
+    width: 1200px;
+    height: 1200px;
+    /* text-align: center; */
+    margin: 0px auto;
+}
+/* 헤드 시작 */
+.head{
+    width: 1200px;
+    height: 100px;
+    background-color: cadetblue;
+}
+h1{ 
+    color: aliceblue;
+    float: left;
+    margin: 25px ;
+}
+.A1{
+    color: white;
+    padding: 70px;
+    width: 1000px;
+    padding: auto;
+    text-align: center;
+}
+li{
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    width: 100px;
+    
+}
+
+
+/* 헤드 끝, 메인 시작 */
+
+
+.contents{
+    background-color: white;
+    width: 1000px;
+    margin: 0 auto;
+}
+h2{
+    
+    margin: 50px ;
+}
+.detail{
+    margin: 5px;
+}
+.schedule{
+}
+.schedule ul{
+    margin: 0px;
+    padding: 0px;
+    
+}
+.schedule li{
+    padding: 0px;
+    margin: 0px;
+    width: 300px;
+}
+img{
+    float: left;
+    border-radius:  20px ;
+    margin: 10px;
+    margin-right: 50px;
+}
+
+footer{
+    float: left;
+}
+footer ul{
+    width: 700px;
+}
+footer li{
+    width: 150px;
+    margin: 10px;
+}

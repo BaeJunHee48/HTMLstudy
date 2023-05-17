@@ -1,0 +1,46 @@
+@charset "utf-8";
+*{
+    margin: 0px;
+}
+section{
+    width: 800px;
+    margin: 20px auto;
+    display: block;
+    background-color: antiquewhite;
+}
+h2{
+    font-size: 30px;
+    color: rgb(3, 73, 50);
+}
+article{
+    width: 350px;
+    height: 200px;
+    background-color: darkgray;
+    margin: 10px;
+    padding: 10px;
+    float: left;
+}
+.haus{ 
+    background-color: rgb(215, 250, 224);
+}
+
+footer{
+    /* width: 100px; */
+    height: 50px;
+    width: 80%;
+    clear: both;
+    margin: 0px auto;
+    /* color: #fff;
+    text-align: center;
+    line-height: 50px;
+    background-color: black; */
+}
+footer>p{
+    color: #fff;
+    text-align: center;
+    background-color: black;
+    line-height: 50px
+}
+li{
+    list-style-image: url(../images/dot.png);
+}

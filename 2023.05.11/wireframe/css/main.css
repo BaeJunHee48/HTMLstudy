@@ -1,0 +1,154 @@
+@charset "UTF-8";
+* {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  font-family: "맑은고딕";
+  color: #333;
+}
+body {
+  background-color: white;
+  font-size: 20px;
+}
+a {
+  text-decoration: none;
+  display: block;
+}
+.Wrap {
+  /* margin: 0 auto; */
+  width: 1000px;
+}
+/* 상단 */
+header {
+  width: 100%;
+  height: 100px;
+}
+.top {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(12, 67, 70, 0.308);
+}
+.logo {
+  width: 250px;
+  height: 100px;
+  /* background-color: antiquewhite; */
+  float: left;
+  /* margin: 25px; */
+}
+.logo img {
+  margin: 25px;
+}
+/* 상단 메뉴 */
+.maun {
+  position: absolute;
+  right: 0;
+  float: right;
+  top: 60px;
+  z-index: 1;
+}
+.navi {
+  /* background-color: aquamarine; */
+}
+.navi > li {
+  background-color: cadetblue;
+  float: right;
+  height: 40px;
+  width: 150px;
+}
+.navi > li > a {
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+/* ----------------중요------------------- */
+.navi > li:hover > a {
+  background-color: rgb(78, 128, 129);
+  color: rgb(87, 18, 18);
+}
+/* -------------------------------------- */
+/* 서브메뉴 */
+.submenu {
+  display: none;
+  background-color: rgb(221, 221, 221);
+  height: 75px;
+}
+.submenu > li > a {
+  line-height: 25px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  color: #4e4e4e;
+  /* background-color: rgb(116, 82, 82); */
+}
+.submenu > li > a:hover {
+  font-size: 15px;
+  background-color: rgb(190, 190, 190);
+  color: rgb(206, 76, 76);
+}
+/* 헤더 끝 본문 시작 */
+.bodywrap {
+  height: 500px;
+  width: 1000px;
+  background-color: bisque;
+}
+.imgslide {
+  position: relative;
+  width: 1000px;
+  height: 300px;
+}
+.imgslide > a {
+  display: block;
+}
+.imgtext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 350px;
+  padding: 15px;
+  border-radius: 1px;
+  background-color: #4e4e4ea4;
+  color: rgba(255, 255, 255, 0.904);
+  font-size: 35px;
+  font-weight: bold;
+  display: inline-block;
+}
+/* 콘텐츠 */
+.contents {
+  width: 1000px;
+  height: 200px;
+}
+/* 공지사항 */
+.notice {
+  /* font-size: 15px; */
+  float: left;
+  margin-top: 10px;
+  background-color: aquamarine;
+  width: 390px;
+  height: 180px;
+}
+/* 갤러리 */
+.gallery {
+  background-color: aquamarine;
+  margin-top: 10px;
+  width: 380px;
+  height: 180px;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* 바로가기 */
+.shortcut {
+  width: 200px;
+  height: 180px;
+  margin-top: 10px;
+  float: left;
+}
+.shortcut .imgsize {
+  width: 200px;
+  height: 180px;
+}

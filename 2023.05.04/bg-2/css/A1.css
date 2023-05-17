@@ -1,0 +1,34 @@
+@charset "utf-8";
+body{
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    /*     
+    margin: 100px auto;
+    background : url("../images/A1.jpg");
+    background-repeat: no-repeat;
+    padding: 50px 80%;
+    background-size: 800px 500px ; */
+}
+.T1{
+    width: 800px;
+    height: 500px;
+    
+    background-color: rgb(0, 255, 136);
+    background: url("../images/A1.jpg");
+    background-repeat: no-repeat;
+    margin: 0px auto;
+    position: relative;
+    background-size: contain;
+
+
+}
+h1{
+    display: inline-block;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    font-size: 150px;
+    text-shadow: 5px 5px black;
+    color: white;
+}

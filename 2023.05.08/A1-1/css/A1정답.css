@@ -1,0 +1,142 @@
+@charset "utf-8"; 
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+@font-face {
+    font-family: 'SDSamliphopangche_Outline';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 공통클래스 및 기본세팅 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+#container{
+    width: 1200px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+/* 상단 */
+header{
+    width: 100%;
+    height: 100px;
+    background-color:cadetblue;
+}
+.logo{
+    float: left;
+    width: 250px;
+    height: 100%;
+    line-height: 100px;
+    padding-left: 20px;
+}
+.logo h1{
+    font-family: 'Nanum Pen Script', cursive;
+    color: white;
+    margin-left: 20px;
+    /* font-size: px; */
+    font-weight: 900;
+    font-size: 50px;
+}
+nav{
+    float: left;
+    width: 900px;
+    height: 100px;
+    margin-top: 40px;
+}
+.topMenu{
+    width: 800px;
+    margin: 0 auto;
+    height: 60px;
+}
+.topMenu > li{
+    float: left;
+}
+.topMenu > li > a{
+    display: block;
+    font-size: 17px;
+    color: white;
+    font-weight: 800;
+    padding: 20px 60px;
+}
+.topMenu > li > a:hover{
+    color: aquamarine;
+}
+/* 메인 */
+.contents{
+    width: 1000px;
+    height: 700px;
+    /* background-color: rgba(75, 112, 117, 0.397); */
+    margin: 50px auto;
+}
+.headling{
+    height: 300px;
+}
+main >section{
+    margin-top: 60px;
+}
+main h2{
+    font-family: 'Nanum Brush Script', cursive;
+    line-height: 50px;
+    /* padding: 0; */
+    /* margin-bottom: 20px;
+    margin-top: 20px; */
+    display: block;
+    font-size: 50px;
+}
+main li{
+    font-size: 15px;
+}
+main h3{
+    font-family:sans-serif
+    font-size: 25px
+}
+main div{
+    margin-top: 20px;
+}
+.detail p{
+    font-family: 'SDSamliphopangche_Outline';
+    font-size: 30px;
+    line-height: norma 36px;
+    color:cornflowerblue;
+    margin-top: 00px;
+}
+.detail img{
+    margin: 5px;
+    border-radius: 20px;
+    float: left;
+}
+/* 하단 */
+footer{
+    width: 1200px;
+    height: 100px;
+    border-top: 2px solid #222;
+}
+.bottomMeun{
+    width: 100%;
+    height: 20px;
+}
+.bottomMeun>ul{
+    margin-top: 15px;
+}
+.bottomMeun>ul>li{
+    padding: 2px 20px;
+    float: left;
+    border-right: 1px solid #222;
+}
+.bottomMeun>ul>li:last-child{
+    border: none;
+}
+.bottomMeun>ul>li>a:visited{
+    #666
+}
+.bottomMeun>ul>li>a:hover{
+    color: rgb(0, 139, 63);
+}
