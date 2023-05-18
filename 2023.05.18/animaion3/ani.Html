@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="css/ani.css"> -->
+    <title>animation</title>
+    <style>
+      .box{
+          width: 100px;
+          height: 100px;
+          margin: 60px auto;
+          background-color: rgb(255, 0, 0);
+          animation-name: ani2;
+          animation-duration: 0.5s;
+          animation-iteration-count:infinite ;
+          animation-timing-function: linear;
+          /* animation: alternate; */
+          /* 위의 값과 아래의 값은 같은것 */
+          /* animation: moving 0.5s alternate infinite ease-in */
+      }
+      @keyframes ani1{
+        from{background-color: blue;}
+        to{background-color: mediumspringgreen;}
+      }
+      @keyframes ani2{
+        0%{background-color: blue;
+        border-radius: 0 0 0 100px;}
+        25%{background-color: rgb(0, 255, 30);
+        border-radius: 100px 0 0 0;}
+        50%{background-color: rgb(68, 0, 255);
+        border-radius: 0 100px 0 0;}
+        75%{background-color: rgb(255, 251, 0);
+        border-radius: 0 0 100px 0;}  
+        100%{background-color: rgb(255, 0, 217);
+        border-radius: 0 0 0 100px;}
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="css/ani.css"> -->
+    <title>animation</title>
+    <style>
+      .box{
+          width: 100px;
+          height: 100px;
+          margin: 60px auto;
+          background-color: brown;
+          /* animation-name: moving;
+          animation-duration: 3s;
+          animation-timing-function: ease-in;
+          animation: alternate;
+          animation-iteration-count:infinite ; */
+          /* 위의 값과 아래의 값은 같은것 */
+          animation: moving 3s alternate infinite ease-in
+          ,background 3s infinite ;
+      }
+      @keyframes moving{
+          from{
+              transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+          }
+          50%{
+              transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+
+          }
+          to{
+              transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+          }
+
+      @keyframes background {
+          from {background-color: rgba(0,0,0,0);}
+          50% {background-color: rgb(212, 0, 255);}
+          to {background-color : rgb(0, 255, 136);}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

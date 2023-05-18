@@ -1,0 +1,432 @@
+@charset "UTF-8";
+*{
+    transition: all ease-in 0.3s;
+    margin: 0;
+    padding: 0;
+}
+img{
+    min-height: 100%;
+    max-width: 100%;
+}
+.imgHoverEvent{
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+.imgHoverEvent .imgbox{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+.imgHoverEvent .hover-img{
+    background: url("../images/KakaoTalk_20230518_114520679_01.jpg") no-repeat center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+}
+.event1 .hover-img{
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 5%,
+        rgba(255,255,255,1) 90%
+    );
+    transform: translateY(60%);
+    transition: 0.5s;
+}
+.event1:hover .hover-img{
+    transform: translateY(0);
+}
+/* ------------------------------------------ */
+.event2 .imgbox{
+    filter: blur(3px) grayscale(100%);
+    transition: 1s;
+}
+.event2:hover .hover-img{
+    display: none;
+}
+.event3 .hover-img{
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,0),rgba(255,255,255,1)
+    );
+    width: 50px;
+    height: 400px;
+    transform: rotateZ(30deg);
+    top: -100px;
+    left: -130px;
+    transition: 0.4s;
+    opacity: 0.5;
+}
+.event3:hover .hover-img{
+    left: 250px;
+    opacity: 1;
+}
+/* -------------------------------------------------- */
+.event4 .line1,
+.event4 .line2,
+.event4 .line3,
+.event4 .line4{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 50px;
+    background: rgba(3,3,3,0.6);
+}.event4 .hover-img{
+    opacity: 0;
+}
+.event4:hover .hover-img{
+    animation: event41Hovor 0.5s linear 1;
+    opacity: 1;
+}
+.event4:hover .line1{
+    animation: event41 0.5s steps(6) 1;
+    left: 0;
+    width: 100%;
+}
+.event4:hover .line2{
+    animation: event42 0.5s steps(6) 1;
+    left: 0;
+    width: 100%;
+    top: 50px;
+}
+.event4:hover .line3{
+    animation: event43 0.5s steps(6) 1;
+    left: 0;
+    width: 100%;
+    top: 100px;
+}
+.event4:hover .line4{
+    animation: event44 0.5s steps(6) 1;
+    left: 0;
+    width: 100%;
+    top: 150px;
+}
+@keyframes event41{
+    0%{
+        width: 0%;
+        left: 50%;
+    }
+    100%{
+        width: 100%;
+        left: 0%;
+    }
+}
+@keyframes event42{
+    0%{
+        width: 0%;
+        left: 50%;
+    }
+    30%{
+        width: 0%;
+        left: 50%;
+    }
+    100%{
+        width: 100%;
+        left: 0%;
+    }
+}
+@keyframes event43{
+    0%{
+        width: 0%;
+        left: 50%;
+    }
+    50%{
+        width: 0%;
+        left: 50%;
+    }
+    100%{
+        width: 100%;
+        left: 0%;
+    }
+}
+@keyframes event44{
+    0%{
+        width: 0%;
+        left: 50%;
+    }
+    70%{
+        width: 0%;
+        left: 50%;
+    }
+    100%{
+        width: 100%;
+        left: 0%;
+    }
+}
+@keyframes event41Hovor{
+    0%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.event5 .imgbox{
+    transform-origin: 0% 0%;
+}
+.event5 .hover-img{
+    transform-origin: 100% 100%;
+    transform: rotateX(-90deg);
+}
+.event5:hover .imgbox{
+    transform: translateX(90deg);
+    animation: event5Ani1 0.5s linear 1;
+}
+.event5:hover .hover-img{
+    transform: translateX(0deg);
+    animation: event5Ani2 0.8s linear 1;
+}
+@keyframes event5Ani1{
+    0%{
+        transform: rotateX(0deg);
+    }
+    100%{
+        transform: rotateX(90deg);
+    }
+}
+@keyframes event5Ani2{
+    0%{
+        transform: rotateX(-90deg);
+    }
+    30%{
+        transform: rotateX(-90deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+.event6 .imgbox{
+    position: relative;
+}
+.event6 .hover-img{
+    opacity: 0;
+}
+.event6:hover .imgbox{
+    animation: event6Ani1 0.6s linear 1; 0.6s linear 1;
+    left: -200px;
+}
+.event6:hover .hover-img{
+    animation: event6Ani2 0.6s linear 1;
+    opacity: 1;
+}
+@keyframes event6Ani1{
+    0%{
+        left: 0;
+        transform: scale(1,1);
+    }
+    50%{
+        left: 0;
+        transform: scale(0.5,0.5);
+    }
+    100%{
+        left: -200px;
+        transform: scale(0,0);
+    }
+}
+@keyframes event6Ani2{
+    0%{
+        opacity: 0;
+        transform: scale(0.7,0.7);
+    }
+    60%{
+        opacity: 0;
+        transform: scale(0.7,0.7);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1,1);
+    }
+}
+.event7 .hover-img span{
+    display: block;
+    border: 4px solid orangered;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 30%;
+    width: 80%;
+    left: 10%;
+    transition: 0.5s;
+}
+.event7 .hover-img span p{
+    font-size: 40px;
+    font-weight: 700;
+    opacity: 0;
+}
+.event7:hover .hover-img span{
+    animation: event7Ani1 0.8s linear 1;
+    height: 150px;
+}
+.event7:hover .hover-img span p{
+    animation: event7Ani2 0.8s linear 1;
+    opacity: 1;
+}
+@keyframes event7Ani1{
+    0%{
+        height: 30px;
+    }
+    80%{
+        height:150px;
+    }
+    100%{
+        height: 150px;
+    }
+}
+@keyframes event7Ani2{
+    0%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.event8 .hover-img span p{
+    font-size: 20px;
+    font-weight: 700;
+}
+.event8 .hover-img span.span1{
+    display: block;
+    position: absolute;
+    top: -90px;
+    width: 120%;
+    height: 100px;
+    line-height: 100px;
+    background-color: brown;
+    transition: 0.5s;
+    transform: rotate(10deg);
+    text-align: center;
+    margin-top: 10px;
+}
+.event8 .hover-img span.span2{
+    display: block;
+    position: absolute;
+    bottom: -90px;
+    left: -40px;
+    text-align: center;
+    width: 120%;
+    height: 100px;
+    background-color: rgb(0, 255, 55);
+    transition: 0.5s;
+    transform: rotate(10deg);
+}
+.hover-img p.p2{
+    margin-top: 15px;
+}
+.event8:hover .hover-img span.span1{
+    top: -40px;
+}
+.event8:hover .hover-img span.span2{
+    bottom: -40px;
+}
+/* }
+ul{
+    list-style: none;
+}
+.header{
+    width: 1200px;
+    height: 100px;
+    background-color: antiquewhite;
+}
+.header ul{
+    margin: 0 auto;
+    width: 1000px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .header li {
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    margin: 20px 40px;
+    font-size: 30px;
+} */
+/* .menu-item{
+    margin: 0 10px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fade-in 0.5s forwards;
+    animation-duration: 0.2s;
+}
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* --------------------------------------------- */
+/* .animated-text .span1{
+    display: inline-block;
+    animation: drop-in1 2s ease-in-out;
+    opacity: 0;
+}
+@keyframes drop-in1{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+} */
+/* ----------------------------------------------- */
+/* .animated-text .span2{
+    display: inline-block;
+    animation: drop-in2 4s ease-in-out;
+    opacity: 0;
+}
+@keyframes drop-in2{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+.main{
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.imgHoverEvent{
+    position: relative;
+    float: left;
+    margin: 50px;
+}
+.hover-img{
+    background-image: url(../images/KakaoTalk_20230518_114520679_01.jpg) no-repeat;
+    background-size: cover;
+} */
+/* --------------------------------------------------------------------------- */
+/* .event2{
+    animation: event2 3s alternate infinite ease-in
+}
+@keyframes event2{
+    from{
+
+    }
+} */ 
