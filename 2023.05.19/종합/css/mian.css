@@ -1,0 +1,163 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  list-style: none;
+}
+body {
+  width: 1000px;
+  height: 650px;
+  margin: 0 auto;
+}
+/* .wrap {
+  width: 1000px;
+  height: 650px;
+} */
+/* 상단 시작 */
+header {
+  height: 650px;
+  background-color: antiquewhite;
+  width: 200px;
+  float: left;
+}
+.top {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.logo {
+  /* background-color: rgb(11, 51, 38); */
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+.logo h1 {
+  font-size: 35px;
+  color: black;
+}
+/* 상단 메뉴 */
+.maun {
+  background-color: aquamarine;
+  z-index: 1;
+  position: absolute;
+  width: 200px;
+}
+.navi {
+}
+.navi > li {
+  height: 100px;
+  width: 200px;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  /* margin: 10px auto; */
+}
+.navi > li > a {
+  /* background-color: aliceblue; */
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 100px;
+  color: aliceblue;
+}
+.navi > li:hover > a {
+  background-color: aliceblue;
+  color: black;
+}
+.navi > li:hover .submenu {
+  display: block;
+}
+/* 서브 메뉴 */
+.submenu {
+  position: relative;
+  top: -100px;
+  left: 200px;
+  height: 120px;
+  /* background-color:blanchedalmond; */
+  display: none;
+}
+.submenu > li {
+  height: 50px;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.452);
+}
+.submenu > li > a {
+  line-height: 50px;
+  font-size: 25px;
+  text-align: center;
+  color: aliceblue;
+}
+.submenu > li > a:hover {
+  background-color: aliceblue;
+  color: rgb(255, 255, 255);
+}
+/* 본문 */
+.bodywrap {
+  width: 800px;
+  height: 650px;
+  float: left;
+}
+/* 중앙 이미지 */
+.imgbox a img {
+  width: 800px;
+  height: 350px;
+}
+.imgbox a {
+  position: relative;
+  display: block;
+  font-size: 25px;
+}
+.imgtext {
+  background-color: rgba(0, 0, 0, 0.452);
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: white;
+  display: inline-block;
+}
+/* 콘텐츠 */
+.contents {
+  background-color: antiquewhite;
+  width: 800px;
+  height: 150px;
+}
+/* 공지사항 */
+.notice{
+  float: left;
+  /* width: px; */
+  width: 100px;
+  height: 25px; 
+}
+.notice a{
+  margin-top: 25px;
+  display: inline-block;
+  float: left;
+  height: 200px;
+  width: 100px; 
+}
+
+/* 갤러리 */
+.tops{
+  float: left;
+  width: 400px;
+  height: 150px;
+}
+.tops h3{
+  background-color: aqua;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  float: left;
+}
