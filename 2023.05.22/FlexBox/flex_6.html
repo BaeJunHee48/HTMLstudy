@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>플렉스박스 교차축2</title>
+    <head>
+    <style>
+      .container{
+        width: 450px;
+        height: 150px;
+        background-color: antiquewhite;
+
+        border: 1px solid #222;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+      }
+    .box{
+        padding: 5px 45px;
+        background-color:aqua;
+        margin: 5px;
+    }
+    #box1{
+        align-self: flex-start;
+    }
+    #box3{
+        align-self: stretch;
+    }
+    #box4{
+        align-self: flex-end;
+    }
+    </style>
+ </head>
+  <body>
+    <div class="container">
+      <div class="box" id="box1"><p>1</p></div>
+      <div class="box" ><p>2</p></div>
+      <div class="box" id="box3"><p>3</p></div>
+      <div class="box" id="box4"><p>4</p></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrap{
+            background: url("A1.jpg") no-repeat left top fixed;
+            background-size: cover;
+            min-height: 100vh;
+            min-width: 100vw;
+            /* VH= 보이는 화면의 높이, VH = 현재 보이는 화면의 넓이 */
+            /* 공식 : 높이 800px = 1vh 일때 8px로 계산 */
+            display:flex;
+            /* Flex는 부모에게 */
+            justify-content: center;
+            color: white;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+        /* button{
+            width: 70px;
+            height: 50px;
+            border-radius: 5px;
+            
+        } */
+        h1{
+            width: 200px;
+            height: 50px;            
+        }
+        p{
+            width: 300px;
+            height: 50px;
+        }
+        .dog{
+            display: flex;
+            align-items: center;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <H1>Welcome!</H1>
+        <div class="dog">
+        <img src="b1.jpg" alt="">
+        <img src="b2.jpg" alt="">
+        <img src="b3.jpg" alt=""></div>
+        <p>100vh and 100vw를 응용한 문제입니다.</p>
+        <!-- <button>클릭!</button> -->
+    </div>   
+</body>
+</html>
