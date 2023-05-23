@@ -1,0 +1,88 @@
+@charset "UTF-8";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.teblist{
+    display: flex;
+    background-color: aquamarine;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.tab{
+    line-height: 60px;
+    font-weight: bold;
+    padding: 0 15px;
+    position: relative;
+    display: block;
+}
+.tab.selected::after{
+    content: "";
+    left: 13px;
+    /* top:22px; */
+    right: 13px;
+    position: absolute;
+    bottom: 10px;
+    height: 5px;
+    background-color: cornflowerblue;
+}
+.row_wrap{
+    width: 400px;
+    /* background-color: bisque; */
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+}
+.row{
+    display: flex;
+    padding: 10px 0;
+    text-align: center;
+    align-items: center;
+}
+.row input{
+    background-color: rgba(109, 109, 109, 0.384);
+    border: 1px solid rgb(255, 154, 255);
+}
+.txtfield.big{
+    height: 150px;
+}
+.title_content{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    font-weight: bold;
+    /* margin: 10px; */
+}
+.txtfield{
+    width: 300px;
+    height: 38px;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.map_wrap{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.footer{
+    height: 100px;
+    background-color: rgb(105, 105, 105);
+    line-height: 100px;
+    padding: 0 10px;
+    margin-top: auto;
+}
