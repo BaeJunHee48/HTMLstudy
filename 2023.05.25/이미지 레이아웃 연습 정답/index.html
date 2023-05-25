@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="css/main.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>이미지 레이아웃 연습 정답</title>
+</head>
+<body>
+    <!-- 상단 -->
+    <header>
+        <!-- 타이틀 -->
+        <h1>
+            MY <br/> web-design 
+            <br>portfolio <br/> <span>collection</span>
+        </h1>
+        <!-- 오브젝트 시작 -->
+        <div class="object">
+            <div class="border">
+                <img src="images/logo.png" alt="logo">
+            </div>
+        </div>
+    </header>
+    <!-- 오브젝트 -->
+    <section>
+        <!-- conts01 -->
+        <div class="contents">
+            <a href="#"><img src="images/1.jpg" alt="이미지1"></a>
+            <a href="#"><img src="images/2.jpg" alt="이미지2"></a>
+            <a href="#"><img src="images/3.jpg" alt="이미지3"></a>
+            <a href="#"><img src="images/4.jpg" alt="이미지4"></a>
+            <a href="#"><img src="images/5.jpg" alt="이미지5"></a>
+            <a href="#"><img src="images/6.jpg" alt="이미지6"></a>
+        </div>
+        <!-- conts02 -->
+        <div class="contents">
+            <a href="#"><img src="images/7.jpg" alt="이미지7"></a>
+            <a href="#"><img src="images/8.jpg" alt="이미지8"></a>
+            <a href="#"><img src="images/9.jpg" alt="이미지9"></a>
+            <a href="#"><img src="images/10.jpg" alt="이미지10"></a>
+            <a href="#"><img src="images/11.jpg" alt="이미지11"></a>
+        </div>
+        <!-- conts03 -->
+        <div class="contents">
+            <a href="#"><img src="images/12.jpg" alt="이미지12"></a>
+            <a href="#"><img src="images/13.jpg" alt="이미지13"></a>
+            <a href="#"><img src="images/14.jpg" alt="이미지14"></a>
+            <a href="#"><img src="images/15.jpg" alt="이미지15"></a>
+            <a href="#"><img src="images/16.jpg" alt="이미지16"></a>
+            <a href="#"><img src="images/1.jpg" alt="이미지6"></a>
+        </div>
+    </section>
+    <!-- 메뉴바 (Nav) -->
+    <nav>
+        <a href="#" class="active">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </nav>
+    <!-- Javascript -->
+    <script>
+        const navLink = document.querySelector("nav a");
+        navLink.addEventListener("click", function(){
+            navLink.classList.toggle("active")
+        })
+    </script>
+    <!-- 바텀(Footer) -->
+    <footer>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fa-brands fa-youtube" style="color: #fff;"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-brands fa-facebook" style="color: #fff;"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-brands fa-instagram" style="color: #fff;"></i>
+                </a>
+            </li>
+        </ul>
+        <p>Copyright &copy; 2023 BaeJunHee </p>
+    </footer>
+    
+</body>
+</html>
