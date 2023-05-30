@@ -96,6 +96,17 @@ nav #login:hover{
   outline: none;
   margin-left: 5px;
 }
+.plus{
+  max-width: 1000px;
+  height: 200px;
+  display: inline-block;
+}
+.plus ul{
+  background-color: #55555537;
+  display: flex;
+  width: 50px;
+  height: 50px;
+}
 .main_wrap > button {
   height: 30px;
   border: 0;
