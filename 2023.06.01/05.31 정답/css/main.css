@@ -167,6 +167,7 @@ span:nth-child(4n) {
     margin-right: 55px;
   }
   .search-box{
+    align-items: center;
     display: block;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -259,7 +260,12 @@ span:nth-child(4n) {
     float: left;
     overflow: hidden;
 }
-.con_bn:nth-child(2){
+.con_bn:nth-child(1){
+    border-left: 1px solid #ccc; 
+    border-right: 1px solid #ccc; 
+    box-sizing: border-box;
+}
+.con_bn:nth-child(3){
     border-left: 1px solid #ccc; 
     border-right: 1px solid #ccc; 
     box-sizing: border-box;
