@@ -29,6 +29,14 @@ body {
     letter-spacing: 0;
     word-break: break-all;
 }
+/* 공통클래스 */
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+}
 .wrap {
     position: relative;
     display: block;
@@ -100,7 +108,6 @@ body {
 .gnb>li:hover{
     color: #ed1c24;
 }
-/* 수정 필요 */
 .gnb > li {
     position: relative;
     display: block;
@@ -168,7 +175,40 @@ body {
     height: 11px;
     background-color: #999;
 }
-/* 미완 */
-.lang-list>li:.lng-active{
-
+/* 반복 X */
+.lang-list>li:last-child::after{
+    content: none;
+}
+/* 비주얼 */
+.visual{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 910px;
+    background: url(../images/img_visual01.png) no-repeat center fixed;
+    background-size: cover;
+    margin-top: 80px;
+}
+.visusl-inner{
+    position: relative;
+    display: block;
+    height: 100%;
+    /* 마진 탑으로 했을때 모두 밀려날경우 페딩 탑을 1준다 */
+    padding-top: 1px;
+}
+.visusl-slogan{
+    position: relative;
+    font-size: 70px;
+    color: white;
+    font-weight: bold;
+    margin-top: 245px;
+}
+.visusl-slogan::before{
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: -45px;
+    width: 60px;
+    height: 5px;
+    background-color: #ed1c24;
 }
