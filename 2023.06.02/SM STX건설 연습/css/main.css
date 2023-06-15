@@ -419,22 +419,22 @@ body {
     position: relative;
     display: block;
 }
-.news-list >li{
+.news-list > li {
     position: relative;
     display: block;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     padding: 25px 0;
 }
-.news-list >li:last-child{
+.news-list > li:last-child {
     border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
-.news-list >li >a{
+.news-list > li > a {
     position: relative;
     display: block;
     font-size: 16px;
-    color:white;
+    color: white;
 }
-.news-list > li > a >.news-txt{
+.news-list > li > a > .news-txt {
     position: relative;
     display: block;
     /* 말줄임... 표시 */
@@ -444,7 +444,7 @@ body {
     overflow: hidden;
 }
 
-.news-list > li > a::after{
+.news-list > li > a::after {
     content: "";
     position: absolute;
     right: 29px;
@@ -453,4 +453,180 @@ body {
     height: 23px;
     background: url(../images/bg_common.png) no-repeat;
     background-position: 0px -49px;
+}
+/* 고객 센터 */
+.cs{
+    background-color: #f8f8f8;
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 60px 0;
+}
+.cs-inner{
+    position: relative;
+    display: block;
+}
+.cs-link{
+    position: relative;
+    display: block;
+    width: calc(50% - 1px);
+    height: 200px;
+    background-color: #fff;
+    padding: 50px 60px;
+}
+.cs-inner > .cs-link:first-child{
+    float: left;
+    background: #fff url(../images/bg_faq.png) no-repeat;
+    background-position:  calc(100% - 50px) 50%;
+} 
+.cs-inner > .cs-link:last-child{
+    float: right;
+    background: #fff url(../images/bg_custom.png) no-repeat;
+    background-position:  calc(100% - 50px) 50%;
+} 
+.cs-link > h3{
+    position: relative;
+    display: block;
+    color: #000;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+/* 미완 */
+.about {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.abuot-inner {
+    position: relative;
+    display: block;
+}
+.about-top {
+    position: relative;
+    display: block;
+    background: url(../images/img_about.png) no-repeat;
+    background-position: 100% 50%;
+    margin-bottom: 80px;
+    margin-top: 80px;
+    height: 370px;
+}
+.about-top > h2 {
+    position: relative;
+    display: block;
+    font-size: 44px;
+    color: #111;
+    font-weight: bold;
+    padding-top: 35px;
+    padding-bottom: 55px;
+    text-transform: uppercase;
+}
+.about-top > p {
+    position: relative;
+    display: block;
+    font-size: 15px;
+    padding-left: 100px;
+    padding-bottom: 70px;
+}
+.about-top > p > b {
+    position: relative;
+    display: block;
+    font-size: 21px;
+    font-weight: bold;
+    color: #111;
+    padding-bottom: 10px;
+}
+.about-top > p::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 15px;
+    width: 37px;
+    height: 5px;
+    background-color: #ed1c24;
+}
+.about-bottam{
+    position: relative;
+    display: block;
+    text-align: center;
+}
+.about-list{
+    position: relative;
+    display: inline-block;
+}
+.about-list > li{
+    position: relative;
+    display: block;
+    float: left;
+}
+.about-list > li > a{
+    position: relative;
+    display: block;
+    font-size: 22px;
+    color: #111;
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+.about-list > li > a::before{
+    content: "";
+    display: block;
+    width: 110px;
+    height: 108px;
+    background: url(../images/bg_icon.png) no-repeat;
+    margin-bottom: 25px;
+}
+.about-list > li:nth-child(2){
+    margin: 0px 200px;
+}
+.about-list > li:nth-child(1) >a::before{
+    background-position: 0px 0px;
+}
+.about-list > li:nth-child(2) >a::before{
+    background-position: -110px 0px;
+}
+.about-list > li:nth-child(3) >a::before{
+    background-position: -230px 0px;
+}
+/* 푸터 */
+.footer{
+    position: relative;
+    display: block;
+    padding: 50px 0;
+    background-color: #424242;
+}
+.footer-inner{
+    position: relative;
+    display: block;
+}
+.footer-logo{
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 130px;
+}
+/* .footer-logo > img{
+    width: 128px;
+    height: 23px;
+} */
+.footer-info{
+    position: relative;
+    display: block;
+    float: left;
+}
+.footer-list > li{
+    position: relative;
+    display: block;
+    font-size: 13px;
+    color: #c3c3c2;
+    margin-bottom: 5px;
+}
+.footer-list > li > address{
+    position: relative;
+    display: block;
+    font-style: normal;
+}
+.footer-list > li > i{
+    position: relative;
+    display: inline-block;
+
 }
