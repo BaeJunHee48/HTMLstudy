@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Noto+Sans:ital,wght@0,300;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 * {
     margin: 0;
     padding: 0;
@@ -48,6 +49,61 @@ body {
     width: 100%;
     clear: both;
 }
+/* 안내창 */
+body.active {
+    overflow-y: auto;
+}
+.modal-wrap {
+    font-family: "Noto Sans KR", Helvetica, "맑은 고딕", "malgun gothic", "Apple SD Gothic Neo", sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+}
+.modal-wrap .modal-main {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height:  400px;
+    background-color: #fff;
+    border-radius: 30px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.modal-logo{
+    position: absolute;
+    display: block;
+    top: -80px;
+    left: 42%;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+}
+.modal-logo img{
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
+.modal-nonotic{
+    padding: 80px 30px 23px 30px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 50px;
+    /* text-align: center; */
+    letter-spacing: -1.2px;
+}
+.modal-nonotic strong{
+    color: #ed1c24;
+    background:  linear-gradient(to top,#ffe400 50%, transparent 50%);
+}
+
+
 /* 헤더 */
 .header {
     /* background-color: aquamarine; */
@@ -455,18 +511,18 @@ body {
     background-position: 0px -49px;
 }
 /* 고객 센터 */
-.cs{
+.cs {
     background-color: #f8f8f8;
     position: relative;
     display: block;
     width: 100%;
     padding: 60px 0;
 }
-.cs-inner{
+.cs-inner {
     position: relative;
     display: block;
 }
-.cs-link{
+.cs-link {
     position: relative;
     display: block;
     width: calc(50% - 1px);
@@ -474,17 +530,17 @@ body {
     background-color: #fff;
     padding: 50px 60px;
 }
-.cs-inner > .cs-link:first-child{
+.cs-inner > .cs-link:first-child {
     float: left;
     background: #fff url(../images/bg_faq.png) no-repeat;
-    background-position:  calc(100% - 50px) 50%;
-} 
-.cs-inner > .cs-link:last-child{
+    background-position: calc(100% - 50px) 50%;
+}
+.cs-inner > .cs-link:last-child {
     float: right;
     background: #fff url(../images/bg_custom.png) no-repeat;
-    background-position:  calc(100% - 50px) 50%;
-} 
-.cs-link > h3{
+    background-position: calc(100% - 50px) 50%;
+}
+.cs-link > h3 {
     position: relative;
     display: block;
     color: #000;
@@ -545,21 +601,21 @@ body {
     height: 5px;
     background-color: #ed1c24;
 }
-.about-bottam{
+.about-bottam {
     position: relative;
     display: block;
     text-align: center;
 }
-.about-list{
+.about-list {
     position: relative;
     display: inline-block;
 }
-.about-list > li{
+.about-list > li {
     position: relative;
     display: block;
     float: left;
 }
-.about-list > li > a{
+.about-list > li > a {
     position: relative;
     display: block;
     font-size: 22px;
@@ -567,7 +623,7 @@ body {
     font-weight: bold;
     margin-bottom: 100px;
 }
-.about-list > li > a::before{
+.about-list > li > a::before {
     content: "";
     display: block;
     width: 110px;
@@ -575,30 +631,30 @@ body {
     background: url(../images/bg_icon.png) no-repeat;
     margin-bottom: 25px;
 }
-.about-list > li:nth-child(2){
+.about-list > li:nth-child(2) {
     margin: 0px 200px;
 }
-.about-list > li:nth-child(1) >a::before{
+.about-list > li:nth-child(1) > a::before {
     background-position: 0px 0px;
 }
-.about-list > li:nth-child(2) >a::before{
+.about-list > li:nth-child(2) > a::before {
     background-position: -110px 0px;
 }
-.about-list > li:nth-child(3) >a::before{
+.about-list > li:nth-child(3) > a::before {
     background-position: -230px 0px;
 }
 /* 푸터 */
-.footer{
+.footer {
     position: relative;
     display: block;
     padding: 50px 0;
     background-color: #424242;
 }
-.footer-inner{
+.footer-inner {
     position: relative;
     display: block;
 }
-.footer-logo{
+.footer-logo {
     position: relative;
     display: block;
     float: left;
@@ -608,25 +664,97 @@ body {
     width: 128px;
     height: 23px;
 } */
-.footer-info{
+.footer-info {
     position: relative;
     display: block;
     float: left;
 }
-.footer-list > li{
+.footer-list > li {
     position: relative;
     display: block;
     font-size: 13px;
     color: #c3c3c2;
     margin-bottom: 5px;
 }
-.footer-list > li > address{
+.footer-list > li > address {
     position: relative;
     display: block;
     font-style: normal;
 }
-.footer-list > li > i{
+.footer-list > li > i {
     position: relative;
     display: inline-block;
-
+}
+/* 탑 버튼 */
+.top-butoon {
+    position: fixed;
+    right: 30px;
+    bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 999;
+}
+.top-butoon .chat_btn span {
+    position: absolute;
+    top: 30px;
+    right: 80px;
+    width: 160px;
+    background-color: #fff;
+    border-radius: 23px;
+    box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    text-align: center;
+    line-height: 45px;
+    display: none;
+}
+.top-butoon .chat_btn:hover span {
+    display: block;
+}
+.top-butoon #shop-btn {
+    position: relative;
+    display: block;
+    width: 55px;
+    line-height: 55px;
+    background-color: #fff;
+    border-radius: 55px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.6), inset 0px 5px 10px 0 rgba(255, 255, 255, 0.14);
+    letter-spacing: 0.5px;
+}
+.top-butoon #top-btn {
+    position: relative;
+    display: block;
+    width: 55px;
+    line-height: 55px;
+    background-color: #ed1c24;
+    border-radius: 55px;
+    text-align: center;
+    box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.6), inset 0px 5px 10px 0 rgba(255, 255, 255, 0.14);
+}
+/* 애니메이션 */
+.top-butoon .chat_btn {
+    -webkit-animation: updown 2s infinite ease-in-out;
+    animation: updown 2s infinite ease-in-out;
+}
+.top-butoon .top-btn img {
+    transform: rotate(180deg);
+}
+.top-butoon .top-btn img.up {
+    transform: rotate(0deg);
+}
+@-webkit-keyframes updown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
