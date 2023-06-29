@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>변수 출력 예제</title>
+    </head>
+    <body>
+        <script>
+            // 변수 선언
+            var apple = 2000;
+            var banana = 10000;
+            var total = apple + banana;
+
+            // 입력창
+
+            // 계산 식
+
+            // 콤마 추가 함수
+            function addCommas(number) {
+                return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+            
+            // 화면 출력
+            document.write(`사과 : ${addCommas(apple)}<br>`);
+            document.write(`바나나 : ${addCommas(banana)}<br>`);
+            document.write(`총 가격 : ${addCommas(total)}<br>`);
+
+        </script>
+    </body>
+</html>

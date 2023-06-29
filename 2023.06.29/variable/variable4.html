@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>과일</title>
+        <style>
+            h1{
+                color: #333;
+            }
+            .item{
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+            .item img{
+                width: 50px;
+                height: 50px;
+                margin-right: 10px;
+            }
+            .item span{
+                font-weight: bold;
+            }
+            .quantity-input{
+                width: 50px;
+                text-align: center;
+            }
+            .total-price{
+                font-size: 20px;
+                font-weight: bold;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>과일 구매</h1>
+        <div class="item">
+            <img src="apple.jpg" alt="사과" />
+            <span>사과</span>
+            <input type="number" class="quantity-input" id="appleQuntity" min="0" value="0" />
+        </div>
+        <div class="item">
+            <img src="banana.jpg" alt="바나나" />
+            <span>바나나</span>
+            <input type="number" class="quantity-input" id="bananaQuntity" min="0" value="0" />
+
+        </div>
+        <button onclick="calculateTotal()">총 가격 계산하기</button>
+        <p class="total-price" id="totalPrice">총 가격 : 0원</p>
+        <script>
+            function calculateTotal() {
+                // 변수 선언
+                var applePrice = 2000;
+                var bananaprice = 1000;
+
+                var appleQuntity = parseInt(document.getElementById("appleQuntity").value);
+
+                var bananaQuntity = parseInt(document.getElementById("bananaQuntity").value);
+
+                // 콤마 추가 함수
+                function addCommas(number) {
+                    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                }
+
+                // 계산
+                var total = applePrice * appleQuntity + bananaprice * bananaQuntity;
+                document.getElementById("totalPrice").textContent = `총 가격 : ${addCommas(total)} 원`;
+            }
+        </script>
+    </body>
+</html>

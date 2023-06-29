@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>변수</title>
+    </head>
+    <body>
+        <!-- 나이 = 올해 연도 - 태어난 연도 + 1
+
+    변수 이릅은 의미있게 작성 되어야 한다.
+    var (변수명)
+        
+    나이 = var age;
+    올해 연도 var currentYear;
+    태어난 연도 = var birthYear;
+--------------------------------------------------------------
+    변수 선언은 한번에 가능하다.
+    var currentYear , birthYear , age;
+----------------------------------------------------------
+    now, _now , now25, now_25 (O)
+    25now , now 25, +now (X)
+-------------------------------------------------------
+    var birthYear;  --- 변수 선언
+    birthYear = 1998;  --- 변수의 값 할당
+------------------------------------------
+    var birthYear = 1998; --- 한번에 변수 선언 및 값 할당 가능
+    -->
+
+        <script>
+
+            // 변수 선언
+            var currentYear = 2023;
+                 var birthYear;
+                 var age;
+                 // 입력창
+                 birthYear = prompt("태어난 연도를 입력하세요.(YYYY)", "");
+                 //   나이 = 올해연도 - 태어난연도 + 1
+                 age = currentYear - birthYear + 1;
+                 document.write(currentYear + "년 현재 <br>");
+                 document.write(birthYear + "년 태어난 사람의 나이는" + age + "세입니다.");
+
+
+                       // 변수 선언
+                       // var currentYear, birthYear, age;
+                       // 올해 연도 선언
+                       // currentYear = 2023;
+
+                       // 입력창
+                       // birthYear = prompt("태어난 연도를 입력하세요.(YYYY)", "2000");
+                       // 나이 = 올해 연도 - 태어난 연도 +1
+                       // age = currentYear - birthYear + 1;
+                       // document.write(currentYear + "년 현재<br>");
+                       // document.write(birthYear + "년 태어난 사람의 나이는" + age + "세입니다.");
+
+
+                       // 몸무게 = 키-몸무게 * 0.5
+
+                       // 변수 선언
+                    //    var cm, kg, ;
+        </script>
+    </body>
+</html>

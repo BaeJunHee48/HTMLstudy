@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>변수 적정 몸무게</title>
+    </head>
+    <body>
+        <script>
+            // 변수 선언
+            var height; // 키
+            // var weight; // 몸무게
+            var calculateWeight; // 몸무게 계산
+
+            // 입력창
+            height = prompt("키를 입력해 주세요.(.cm)", "");
+
+            // 적정 몸무게 = (키 - 몸무게) * 0.9
+            // calculateWeight = (height - weight) * 0.9;
+
+            // (키 - 100)*0.9 = 키 비례 평균 몸무게 (소수점 없애기)
+            calculateWeight =Math.floor((height - 100) * 0.9) ;
+            // (키 - 100)*0.9 = 키 비례 평균 몸무게 (소수점 반올림)
+            calculateWeight =Math.round((height - 100) * 0.9) ;
+
+            document.write(`키 : ${height} cm<br>`);
+            // document.write(`몸무게 : &{weight} kg<br>`);
+            document.write(`적정 몸무게 : ${calculateWeight} kg 입니다.`);
+        </script>
+    </body>
+</html>
