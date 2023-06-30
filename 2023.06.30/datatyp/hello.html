@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <label for="name">이름을 입력하세요:</label>
+        <input type="text" id="name" />
+        <button onclick="gerrt()">인사하기</button>
+        <p id="greeting"></p>
+
+        <!-- 자바 스크립 -->
+        <script>
+            function gerrt() {
+                var nameInput = document.getElementById("name");
+                var name = nameInput.value;
+
+                var getElement = document.getElementById("greeting")
+                // getElement.textContent = "안녕하세요," + name + "님!"
+                getElement.textContent = `안녕하세요, ${name} 님!`
+            }
+        </script>
+    </body>
+</html>

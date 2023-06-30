@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responisive Nav</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+            /* color: black; */
+        }
+        .warp{
+            position: relative;
+            display: block;
+            /* background-color: aquamarine; */
+            width: 100%;
+            border-bottom: 2px solid #333;
+        }
+        .head{
+            position: relative;
+            display: flex;
+            justify-content: space-around
+        }
+        .head img {
+            background-color: #333;
+            position: relative;
+            display: block;
+            width: 130px;
+            height: 50px;
+            margin: 10px;
+        }
+        .head ul{
+            position: relative;
+            display: flex;
+            align-items: center
+        }
+        .head li{
+            color: black;
+            position: relative;
+            display: block;
+            font-weight: bold;
+            margin: 0 20px;
+        }
+        @media screen and (min-width:600px){
+            .warp{
+                width: 100%;
+            }
+        }
+        @media screen and (min-width:600px){
+            .warp{
+                width: 100%;
+            }
+        }
+            
+    </style>
+</head>
+<body>
+    <div class="warp">
+        <div class="head">
+            <a href="#" class="log-img"><img src="" alt="이미지"></a>
+            <ul>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="#">IR</a></li>
+                <li><a href="#">SUSTAINABILITY</a></li>
+                <li><a href="#">PR</a></li>
+                <li><a href="#">SUPPORT</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#"> 가입</a></li>
+            </ul>
+        </div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What time is it?</title>
+    <style>
+      body {
+        font-size: 2em;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      //   var now = new Date();
+      //   var display = now.toLocaleTimeString();
+      //   document.write("현재 시각은 " + display);
+      // 대문자 변화
+      // var text = prompt("문자열을 입력하세요.");
+      // var uppercaseText = text.toUpperCase();
+      // document.write("입력된 문자열의 대문자 표현: " + uppercaseText);
+      //
+      //
+      //   var number = parseFloat(prompt("숫자를 입력하세요."));
+      //   var squareRoot = Math.sqrt(number);
+      //   document.write("입력된 숫자의 제곱근: " + squareRoot);
+      //
+      // var userInput = parseFloat(prompt("0부터 1 사이의 숫자를 입력하세요."));
+
+      // if (isNaN(userInput) || userInput < 0 || userInput > 1) {
+      //   document.write(
+      //     "<p>입력이 유효하지 않습니다. 0부터 1 사이의 숫자를 입력하세요.</p>"
+      //   );
+      // } else if (Math.random() < userInput) {
+      //   document.write("<p>축하합니다!</p>");
+
+      //   document.write("<p>당신은 이번 게임에서 승리했습니다!</p>");
+      // } else {
+      //   document.write("<p>아쉽습니다!</p>");
+
+      //   document.write(
+      //     "<p>당신은 이번 게임에서 패배했습니다. 다음 기회에 도전해보세요!</p>"
+      //   );
+      // }
+      // var weather = ["맑음", "흐림", "비", "눈"];
+      // var randomWeather = weather[3];
+      // document.write("오늘의 날씨 예보: " + randomWeather);
+      // //
+      // var animals = ["사자", "코끼리", "원숭이", "호랑이"];
+      // var randomAnimal = animals[1];
+      // document.write("오늘의 동물 예보는: " + randomAnimal);
+      // //
+      var userChoice = prompt("가위, 바위, 보 중 하나를 선택하세요.");
+var choices = ["가위", "바위", "보"];
+var randomIndex = Math.floor(Math.random() * choices.length);
+var computerChoice = choices[randomIndex];
+
+document.write("<h1>가위바위보 게임 결과</h1>");
+
+document.write("<p>당신의 선택: " + userChoice + "</p>");
+document.write("<p>컴퓨터의 선택: " + computerChoice + "</p>");
+
+if (userChoice === computerChoice) {
+  document.write("<p>무승부입니다!</p>");
+} else if (
+  (userChoice === "가위" && computerChoice === "보") ||
+  (userChoice === "바위" && computerChoice === "가위") ||
+  (userChoice === "보" && computerChoice === "바위")
+) {
+  document.write("<p>당신이 이겼습니다!</p>");
+} else if (
+  (userChoice === "가위" && computerChoice === "바위") ||
+  (userChoice === "바위" && computerChoice === "보") ||
+  (userChoice === "보" && computerChoice === "가위")
+) {
+  document.write("<p>당신이 졌습니다!</p>");
+} else {
+  document.write("<p>유효하지 않은 선택입니다. 가위, 바위, 보 중에서 선택해주세요.</p>");
+}
+    </script>
+  </body>
+</html>
