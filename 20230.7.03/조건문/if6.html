@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>나이 판별</title>
+    </head>
+    <body>
+
+        <h1>3의 배수 입니다.</h1>
+        <label for="number">숫자 : </label>
+        <input type="number" id="number" />
+        <button onclick="checkMultipleOfThree()">확인</button>
+        <p id="result"></p>
+
+        <!-- 나이 판별 -->
+        <!-- <div id="result"></div> -->
+        <script>
+            // function checkMultipleOfThree(){
+            //     var userNumber = document.getElementById("number").value;
+            //     var resultElement = document.getElementById("result");
+            //     if(userNumber % 3 === 0){
+            //         resultElement.textContent = userNumber + "은 3의 배수입니다.";
+            //     }
+            //     else{
+            //         resultElement.textContent = userNumber + "은 3의 배수가 아닙니다."
+            //     }
+            // }
+
+            // ---------------------------------------------------------------------------
+            //  중럽 if~else문
+            // function checkMultipleOfThree(){
+            //     var userNumber = document.getElementById("number").value;
+            //     var resultElement = document.getElementById("result")
+
+            //     if(userNumber !==""){
+            //         if(userNumber % 3 === 0){
+            //             resultElement.textContent = `${userNumber}은(는) 3의 배수 입니다.`
+            //         }
+            //         else
+            //         resultElement.textContent = `${userNumber}은(는) 3의 배수가 아닙니다.`
+            //     }
+            //     else{
+            //         resultElement.textContent = "숫자를 입력해 주세요."
+            //     }
+            // }
+
+            // ---------------------------------------------------------------------------
+            // function comparationPrices() {
+            //     var price1 = document.getElementById("price1").value;
+            //     var price2 = document.getElementById("price2").value;
+            //     var resultElement = document.getElementById("result");
+
+            //     if (price1 !== price2) {
+            //         if (price1 > price2) {
+            //             resultElement.textContent = "price1이 price2보다 더 비싸다.";
+            //         } else resultElement.textContent = "price1 보다 price2가 더 비싸다.";
+            //     } else {
+            //         resultElement.textContent = "price1 와(과) price2와 같다"
+            //     }
+            // }
+            // -------------------------------------------------------------------------
+            // function comparationPrices() {
+            //     var price1 = document.getElementById("price1").value;
+            //     var price2 = document.getElementById("price2").value;
+            //     var resultElement = document.getElementById("result");
+
+            //     if (price1 !== "" && price2 !== "") {
+            //         if (price1 !== price2) {
+            //             if (parseFloat(price1) > parseFloat(price2)) {
+            //                 resultElement.textContent = "price1이 price2보다 더 비싸다.";
+            //             } else resultElement.textContent = "price1 보다 price2가 더 비싸다.";
+            //         } else {
+            //             resultElement.textContent = "price1 와(과) price2와 같다";
+            //         }
+            //     }else{
+            //         resultElement.textContent = "가격을 입력해 주세요."
+            //     }
+            // }
+            // ----------------------------------------------------------------------------
+
+            // var age = prompt("나이를 입력하세요.")
+            // var displayArea = document.querySelector("result")
+
+            // if (age !== null) {
+            //     if(parseInt(age) >= 18 ){
+            //         alert("성인입니다.")
+            //         displayArea.innerHTML = "성인입니다."
+            //     }else{
+            //         alert("미성년입니다.")
+            //         displayArea.innerHTML = "미성년입니다."
+            //     }
+            // }else{
+            //     alert("입력이 취소되었습니다.")
+            // }
+            // --------------------------------------------------------------------
+
+            function checkMultipleOfThree() {
+                var userNumber = document.getElementById("number").value;
+                var resultElement = document.getElementById("result");
+
+                //     if (userNumber !== "") {
+                //         if (userNumber % 3 === 0) {
+                //             resultElement.textContent = `${userNumber}은(는) 3의 배수 입니다.`;
+                //         } else resultElement.textContent = `${userNumber}은(는) 3의 배수가 아닙니다.`;
+                //     } else {
+                //         resultElement.textContent = "숫자를 입력해 주세요.";
+                //     }
+                //     // 조건? 조건이 true일 : 조건이 false
+                // }
+                resultElement.textContent = userNumber !=="" ?
+                (userNumber % 3 === 0 ? `${userNumber}은(는) 3의 배수 입니다.` : `${userNumber}은(는) 3의 배수가 아닙니다.`) : "숫자를 입력해 주세요."
+            }
+        </script>
+    </body>
+</html>
