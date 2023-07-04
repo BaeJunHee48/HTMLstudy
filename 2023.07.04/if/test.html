@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>숫자 조건 확인</title>
+    <link rel="stylesheet" href="css/multi3.css">
+</head>
+
+<body>
+    <input type="number" id="number">
+    <button onclick="checkConditions()">확인</button>
+    <div id="result"></div>
+
+    <script>
+        function checkConditions() {
+            var number = document.getElementById("number").value.trim();
+            var resultElement = document.getElementById("result");
+
+            if (number !== "") {
+                if (!isNaN(number)) {
+                    number = parseInt(number);
+                    if (number > 0) {
+                        resultElement.textContent = "입력한 숫자는 양수입니다.";
+                    } else if (number === 0) {
+                        resultElement.textContent = "입력한 숫자는 0입니다.";
+                    } else {
+                        resultElement.textContent = "입력한 숫자는 음수입니다.";
+                    }
+                } else {
+                    resultElement.textContent = "숫자를 입력해주세요.";
+                }
+            } else {
+                resultElement.textContent = "숫자를 입력해주세요.";
+            }
+        }
+    </script>
+</body>
+
+</html>

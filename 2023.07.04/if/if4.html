@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>논리 연산자 예제(OR, AND, NOT)</title>
+    </head>
+    <body>
+        <label for="number">숫자를 입력하세요 : </label>
+        <input type="number" id="number" />
+        </select>
+        <button onclick="checkNumber()">판별 하기</button>
+        <p id="result"></p>
+        <!-- 논리 연산자
+    OR ||
+    AND &&
+    NOT ! -->
+        <script>
+            function checkNumber(){
+
+                var numberInput = document.getElementById("number");
+                var number = parseInt(numberInput.value);
+                var resultElement = document.getElementById("result");
+
+                if(number !== ""){
+                    if(number > 0){
+                        resultElement.textContent = "입력한 숫자는 양수 입니다."
+                    }
+                    else if(number == 0 ){
+                        resultElement.textContent = "입력한 숫자는 0입니다."
+                    }
+                    else
+                    resultElement.textContent = "입력한 숫자는 음수 입니다."
+                }else{
+                    resultElement.textContent = "숫자를 입력해주세요."
+                }
+// ------------------------------------------------------------------------------
+// if(number > 0) {
+//     resultElement.textContent = "입력한 숫자는 양수 입니다."
+// }
+// else if(number < 0) {
+//     resultElement.textContent = "입력한 숫자는 음수 입니다."
+// }
+// else {
+//     resultElement.textContent = "입력한 숫자는 0입니다."
+// }
+
+
+
+
+
+
+                // // AND 연산자 (&&)
+                // if(number > 0 ){
+                //     resultElement.textContent = "입력한 숫자는 양수 입니다.";
+                // }
+                // // OR 연산자 (||)
+                // else if (number = 0 ){
+                //     resultElement.textContent = "입력한 숫자는 0입니다..";
+                // }
+                // // NOT연산자 (!)
+                // else{
+                //     resultElement.textContent = "입력한 숫자는 음수 입니다.";
+                // }
+                    
+                
+            }
+        </script>
+    </body>
+</html>

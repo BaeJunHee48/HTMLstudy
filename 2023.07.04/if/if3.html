@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>논리 연산자 예제(OR, AND, NOT)</title>
+    </head>
+    <body>
+        <h1>논리 연산자 예제</h1>
+        <label for="age">나이 : </label>
+        <input type="number" id="age" />
+        <label for="hasLicence">운전 면허 여부 : </label>
+        <select name="hasLicence" id="hasLicence">
+            <option value="true"> 있음</option>
+            <option value="false"> 없음</option>
+        </select>
+        <label for="hasCar">자동차 소유 여부 : </label>
+        <select name="hasCar" id="hasCar">
+            <option value="true"> 있음</option>
+            <option value="false"> 없음</option>
+        </select>
+        <button onclick="checkConditions()">조건 확인</button>
+        <p id="result"></p>
+        <!-- 논리 연산자
+    OR ||
+    AND &&
+    NOT ! -->
+        <script>
+            function checkConditions(){
+                var age = parseInt(document.getElementById("age").value);
+                var hasLicense = document.getElementById("hasLicence").value === "true";
+                var hasCar = document.getElementById("hasCar").value === "true";
+                var resultElement = document.getElementById("result");
+
+                // AND 연산자 (&&)
+                if(age >= 18 && hasLicense ){
+                    resultElement.textContent = "성인이며 운전 면허증이 있습니다.";
+                }
+                // OR 연산자 (||)
+                else if (hasLicense || hasCar ){
+                    resultElement.textContent = "운전 면허가 있거나 자동차를 소유하고 있습니다.";
+                }
+                // NOT연산자 (!)
+                else{
+                    resultElement.textContent = "조건에 맞지 않습니다.";
+                }
+                    
+                
+            }
+        </script>
+    </body>
+</html>

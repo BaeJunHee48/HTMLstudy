@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>스위치 문</title>
+
+        <style>
+            body {
+                background-color: #0c3268;
+                color: rgb(243, 243, 243);
+            }
+
+            p {
+                margin-top: 80px;
+                font-size: 2em;
+                font-weight: 700;
+                text-align: center;
+                text-shadow: 1px 2px 1px #000;
+            }
+
+            p strong {
+                font-size: 2.2em;
+                color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var session = prompt("계절을 선택해 주세요. 1-봄, 2-여름, 3-가을, 4-겨울");
+            switch (session) {
+                case "2":
+                case "3":
+                case "4":
+                    document.write("<p>선택하신 계절은 <strong> 봄 </strong>입니다.</p>");
+                    break;
+                case "5":
+                case "6":
+                case "7":
+                    document.write("<p>선택하신 계절은 <strong> 여름 </strong>입니다.</p>");
+                    break;
+                case "8":
+                case "9":
+                case "10":
+                    document.write("<p>선택하신 계절은 <strong> 가을 </strong>입니다.</p>");
+                    break;
+                case "11":
+                case "12":
+                case "1":
+                    document.write("<p>선택하신 계절은 <strong> 겨울 </strong>입니다.</p>");
+                    break;
+                default:
+                    alert("선택을 잘못 했습니다.");
+            }
+        </script>
+    </body>
+</html>

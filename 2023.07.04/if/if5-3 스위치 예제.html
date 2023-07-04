@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>스위치 문 동물 예제</title>
+
+        <style>
+            body {
+                background-color: #0c3268;
+                color: rgb(243, 243, 243);
+            }
+
+            p {
+                margin-top: 80px;
+                font-size: 2em;
+                font-weight: 700;
+                text-align: center;
+                text-shadow: 1px 2px 1px #000;
+            }
+
+            p strong {
+                font-size: 2.2em;
+                color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var animal = prompt("알파벳 A~Z로 시작하는 동물(A~Z중 하나씩 입력하세요.)");
+            switch (Letter.toLowerCase()) {
+                case "a":
+                    document.write("<p>선택하신 알파벳은 <strong>  Ant </strong>입니다.</p>");
+                    break;
+                case "b":
+                case "B":
+                    document.write("<p>선택하신 알파벳은 <strong>  Bear </strong>입니다.</p>");
+                    break;
+                case "c":
+                case "C":
+                    document.write("<p>선택하신 알파벳은 <strong>  Cat </strong>입니다.</p>");
+                    break;
+                case "d":
+                case "D":
+                    document.write("<p>선택하신 알파벳은 <strong>  Duck </strong>입니다.</p>");
+                    break;
+                default:
+                    alert("선택을 잘못 했습니다.");
+            }
+        </script>
+    </body>
+</html>
