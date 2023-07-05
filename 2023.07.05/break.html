@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>break</title>
+    </head>
+    <body>
+        <script>
+            // for(i=0 ; i < 10 ; i++){
+            //     document.write("*");
+            //     break;
+            // }
+            // ---------------------------------------------------------------
+            // for(var i = 1; i <= 10 ; i++){
+            //     if(i == 6) break;
+                   //break = 해당 조건 전에 멈춰라.
+            //     document.write(`${i} , <br/>`)
+            // }
+            // document.write("===== The end =====");
+            // -----------------------------------------------------
+            for(var i = 1 ; i <= 10 ; i++){
+                if(i % 2 == 0 ) continue;
+                // continue = 건너 뛰고 작업 하라.
+                document.write("===== The end =====");
+            }
+        </script>
+    </body>
+</html>

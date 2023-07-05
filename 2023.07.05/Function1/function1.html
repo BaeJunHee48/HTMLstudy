@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>function1</title>
+    </head>
+    <body>
+        <script>
+            // function addNumber() {
+            //     var num1 = 2;
+            //     var num2 = 3;
+            //     var sum = num1 + num2;
+            //     alert("결과 값:" + sum);
+            // }
+            // // 함수를 2번 호출 합니다.
+            // addNumber();
+            // addNumber();
+
+            // ---------------------------------------
+
+            var count = 0;
+            // 함수 선언
+            myFnc();
+            function myFnc() {
+                count++;
+                document.write(`hello ${count},<br/>`);
+            }
+            // 함수 호출(선언 했을땐 이름만으로 호출할수 있다.)
+            myFnc()
+            myFnc()
+            var theFnc = function() {
+                count++;
+                document.write(`bye ${count},<br/>`);
+            }
+            theFnc()
+
+            // count(카운터)는 앞에 명이 달라져도 계속 된다.
+        </script>
+    </body>
+</html>
