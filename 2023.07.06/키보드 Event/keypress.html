@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko  ">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>keypress 이벤트</title>
+        <style>
+            .box {
+                width: 200px;
+                height: 200px;
+                background-color: aqua;
+            }
+            .box.active{
+                background-color: brown;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>keypress 이벤트</h1>
+        <div class="box" tabindex="0" onkeypress="handLekeypress(event)"></div>
+        <p>박스를 클릭한 후 키도브의 Enter키를 눌러주세요.</p>
+
+        <script>
+            function handLekeypress(event) {
+                if (event.key === "Enter") {
+                    var box = document.querySelector(".box");
+
+                    box.classList.add("active");
+                }
+            }
+        </script>
+    </body>
+</html>

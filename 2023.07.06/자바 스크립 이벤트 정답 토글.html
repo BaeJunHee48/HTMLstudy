@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>토글 정답</title>
+
+        <style>
+            #item{
+                position: relative;
+                width: 500px;
+                /* height: auto; */
+                padding: 15px 20px;
+                margin: auto;
+            }
+            #item img{
+                width: 500px;
+            }
+            button{
+                background-color: rgba(255, 255, 0255, 0.7);
+                padding: 5px;
+                border: 1px solid #ccc;
+            }
+            /* .over{
+                position: absolute;
+                left: 30px;
+                bottom: 30px;
+            } */
+            .detail{
+                width: 400px;
+                text-align: left;
+                line-height: 1.8;
+                display: none;
+            }
+            /* #cover{
+                border: 5px solid transparent;
+            } */
+        </style>
+    </head>
+    <body>
+        <div id="item">
+            <img src="dog.jpeg" alt="강아지" />
+            <button  id="open" onclick="toggleDetail()">상세 설명 보기</button>
+            <div id="desc" class="detail">
+                <h4>강아지</h4>
+                <p>
+                    개는 중형 동물이자 가장 널리 분포하며 개체 수가 가장 많은 지상 동물 중 하나이며 가축화한 회색늑대이다. 개는 인류가 최초로 가축으로 삼은 동물로 알려져 있으며, 역사적으로 반려견,
+                    사냥견으로서 길러 왔다.
+                </p>
+                <!-- <button id="close" onclick="hidDetail()">상세 설명 닫기</button> -->
+
+            </div>
+        </div>
+
+        <script>
+            function toggleDetail(){
+                var desc = document.querySelector("#desc");
+                var openButtun = document.querySelector("#open");
+
+                if(desc.style.display === "none"){
+                    desc.style.display = "block";
+                    openButton.innerText="상세 설명 닫기";
+                }
+                else{desc.style.display = "none";
+                openButton.innerText="상세 설명 보기";}
+            };
+            
+            // ----------------------------------------------------
+            // if(desc.style.display === "block"){
+            //     text.style.display = "none";
+            //     openBtn.innerHTML = "상세 설명 열기";
+            // }else{
+            //     desc.style.display = "block";
+            //     openBtn.innerHTML = "상세 설명 닫기";
+            // }
+        </script>
+    </body>
+</html>

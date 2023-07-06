@@ -169,8 +169,54 @@
     line-height: 1.625rem;
     color: #444;
 }
+.board_table{
+    width: 80%;
+    /* border: 1px solid #333; */
+
+}
+.board_table caption{
+    /* width: 90%; */
+    display: none;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #09375a;
+}
+.board_table thead{
+    display: none;
+    /* display: none; */
+    /* margin: 0 auto; */
+    /* padding: 20px; */
+    width: 100%;
+    /* justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: row; */
+    background-color: #09375a;
+    color: #fff;
+    
+}
+.board_table thead tr:nth-child(2){
+    display: block;
+}
 .board_table thead tr th{
-    padding: 100px;
+    display: block;
+    padding: 0 200px;
+}
+.board_table tbody tr td{
+    padding: 30px;
+}
+.board_table tbody tr td a{
+    /* padding: 30px; */
+    font-weight: bold;
+    color: #191919;
+}
+.board_table tbody tr:nth-child(2n+1){
+    background-color: #219af7;
+}
+.board_table tbody tr td:nth-child(2){
+    display: block;
+}
+.board_table tbody tr td{
+    display: none;
 }
 
 /* 콘텐츠 2 )검색어 및 글쓰기 */

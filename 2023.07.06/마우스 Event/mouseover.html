@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>mouseover  이벤트</title>
+        <style>
+            .box {
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                border: 2px solid black;
+                transition: opacity 0.3s;
+            }
+            .box.hovered{
+                opacity: 0.5;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Mousemove 이벤트</h1>
+        <div class="box" onmouseover="handleMouseOver(this)"></div>
+    </body>
+
+    <script>
+        function handleMouseOver(element) {
+            element.classList.add("hovered");
+        }
+    </script>
+</html>

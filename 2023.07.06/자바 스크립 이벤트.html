@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자바 스크립 이벤트 예제</title>
+
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .wary {
+                width: 70%;
+                margin: 0 auto;
+                /* text-align: center; */
+                justify-content: center;
+                flex-wrap: wrap;
+                position: relative;
+                display: flex;
+            }
+            .wary button {
+                position: absolute;
+                display: block;
+                top: 320px;
+                left: 40px;
+            }
+            .wary > img {
+                position: relative;
+                display: block;
+                width: 500px;
+                height: 350px;
+            }
+            .wary h2 {
+                position: relative;
+                display: block;
+            }
+            .btn ::after {
+                content: "close";
+            }
+            .btn .active::after {
+                content: "open";
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wary">
+            <img src="dog.jpeg" alt="강아지" />
+            <div class="popup">
+                <h2>강아지</h2>
+                <p>
+                    개는 중형 동물이자 가장 널리 분포하며 개체 수가 가장 많은 지상 동물 중 하나이며 가축화한 회색늑대이다. 개는 인류가 최초로 가축으로 삼은 동물로 알려져 있으며, 역사적으로 반려견,
+                    사냥견으로서 길러 왔다
+                </p>
+            </div>
+            <button class="btn" onclick="text()">상세 설명</button>
+        </div>
+
+        <!-- --------------------------------------------------------------------------------------- -->
+        <script>
+            function text(){
+
+                var popup = document.querySelector(".popup");
+                var btn = document.querySelector(".btn");
+            }
+        </script>
+
+        <!-- <div class="wary">
+            <img src="dog.jpeg" alt="강아지" />
+            <button onclick="text(this)" id="text">상세 설명 보기</button>
+            <div class="A">
+                <h2>강아지</h2>
+                <p>
+                    개는 중형 동물이자 가장 널리 분포하며 개체 수가 가장 많은 지상 동물 중 하나이며 가축화한 회색늑대이다. 개는 인류가 최초로 가축으로 삼은 동물로 알려져 있으며, 역사적으로 반려견,
+                    사냥견으로서 길러 왔다
+                </p>
+            </div>
+        </div>
+
+        <script>
+            function text(element) {
+                if (element === "onclick") {
+                    element.classList.add(".A");
+                } else {
+                    element.classList.add(".B");
+                }
+            }
+        </script> -->
+    </body>
+</html>
