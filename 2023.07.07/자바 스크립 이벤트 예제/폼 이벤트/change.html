@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>폼 이벤트</title>
+    </head>
+    <body>
+        <h1>change 이벤트</h1>
+        <select name="select" id="select">
+            <option value="apple">사과</option>
+            <option value="banana">바나나</option>
+            <option value="orange">오렌지</option>
+        </select>
+        <script>
+            var select = document.querySelector("#select");
+            select.addEventListener("change", function(){
+                var selectValue = select.value;
+                alert(`선택된 값; ${selectValue}`)
+            })
+        </script>
+    </body>
+</html>

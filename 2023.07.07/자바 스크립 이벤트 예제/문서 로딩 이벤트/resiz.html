@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>resize 이벤트</title>
+        <style>
+            .box{
+                width: 200px;
+                height: 200px;
+                background-color: aqua;
+            }
+            .box.active{
+                background-color: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- resiz 창의 크기에 반응하는 창 -->
+        <h1>rseize이벤트</h1>
+        <div class="box"></div>
+        <p>브라우저 창의 크기를 조정해보세요.</p>
+        <script>
+            function handleResize(){
+                var box = document.querySelector(".box");
+                box.classList.add("active");
+            }
+            window.addEventListener("resize", handleResize);
+
+        </script>
+    </body>
+</html>

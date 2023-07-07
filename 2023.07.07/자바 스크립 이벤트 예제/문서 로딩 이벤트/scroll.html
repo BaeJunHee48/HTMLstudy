@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>scroll 이벤트</title>
+        <style>
+            .container {
+                height: 2000px;
+            }
+            .image {
+                opacity: 0;
+                transition: opacity 0.5s ease;
+            }
+            .image.show {
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>스크롤 이벤트</h1>
+        <div class="container">
+            <img src="dog.jpeg" alt="강아지" class="image" />
+        </div>
+        <script>
+            function handleScroll() {
+                var image = document.querySelector(".image");
+                var imagePosion = image.getBoundingClientRect().top;
+                var windowHeight = window.innerHeight;
+
+                if (imagePosion < windowHeight) {
+                    image.classList.add("show");
+                }
+            }
+            window.addEventListener("scroll", handleScroll);
+        </script>
+    </body>
+</html>

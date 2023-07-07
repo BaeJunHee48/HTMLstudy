@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>lightbox</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                /* box-sizing: border-box; */
+            }
+            ul li{
+                list-style: none;    
+            }
+            .werd {
+                position: relative;
+                display: block;
+            }
+            .wh{
+                margin: 0 auto;
+                width: 500px;
+                position: relative;
+                display: block;
+            }
+            .wh ul li {
+                float: left;
+                margin: 10px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+            }
+            .imge.imgClick{}
+        </style>
+    </head>
+    <body>
+        <div class="werd">
+            <div class="wh">
+                <ul>
+                    <li><img src="../images/tree-1-thumb.jpg" class="image1" onclick="imgClick" alt="나무1" /></li>
+                    <li><img src="../images/tree-2-thumb.jpg" class="image2" onclick="imgClick" alt="나무2" /></li>
+                    <li><img src="../images/tree-3-thumb.jpg" class="image3" onclick="imgClick" alt="나무3" /></li>
+                    <li><img src="../images/tree-4-thumb.jpg" class="image4" onclick="imgClick" alt="나무4" /></li>
+                    <li><img src="../images/tree-5-thumb.jpg" class="image5" onclick="imgClick" alt="나무5" /></li>
+                    <li><img src="../images/tree-6-thumb.jpg" class="image6" onclick="imgClick" alt="나무6" /></li>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            function imgClick(){
+                var imageClick = document.querySelector("image()");
+
+            }
+        </script>
+    </body>
+</html>

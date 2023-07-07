@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자바 스크립트 이벤트 예제</title>
+        <style>
+            .box {
+                color: rgb(250, 1, 1);
+            }
+            .box.clicked {
+                color: rgb(89, 0, 255);
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="MouseClick()">글자색 바꾸기</button>
+        <div class="box">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate nulla pariatur earum enim ipsa, voluptatibus debitis deserunt cum, est fugit beatae? Error suscipit deserunt
+                aspernatur recusandae numquam tenetur esse cum?
+            </p>
+        </div>
+
+        <script>
+            function MouseClick(element) {
+                var box = document.querySelector(".box");
+                
+                box.classList.add("clicked");
+            }
+        </script>
+    </body>
+</html>

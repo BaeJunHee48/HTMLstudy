@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>자바 스크립트 이벤트 예제2</title>
+        <style>
+            .ward {
+                width: 80%;
+                margin: 0 auto;
+            }
+            .top {
+                width: 80%;
+                display: flex;
+                position: fixed;
+                justify-content: space-around;
+            }
+            .top p {
+                align-items: center;
+                display: flex;
+                position: relative;
+                justify-content: center;
+                border: 1px solid #333;
+                margin: 10px;
+                width: 250px;
+                height: 50px;
+            }
+
+            #main {
+                position: relative;
+                display: flex;
+                border: 1px solid #333;
+                margin: 0 auto;
+                /* margin-top: 100px; */
+                border-radius: 20px;
+                width: 500px;
+                height: 400px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ward">
+            <div class="top">
+                <p onclick="colorGreen()">Green</p>
+                <p onclick="colorOrange()">Orange</p>
+                <p onclick="colorPurple()">Purple</p>
+            </div>
+            <div id="main"></div>
+        </div>
+
+        <script>
+            function colorGreen() {
+                var changeColor = document.getElementById("main");
+                changeColor.style.backgroundColor = "green";
+            }
+
+            function colorOrange() {
+                var changeColor = document.getElementById("main");
+                changeColor.style.backgroundColor = "orange";
+            }
+
+            function colorPurple() {
+                var changeColor = document.getElementById("main");
+                changeColor.style.backgroundColor = "purple";
+            }
+            // -------------------------------------------------
+            // 작동 안되는거 ㄱ
+            // function colorGreen(color) {
+            //     var result = document.querySelector("#result");
+            //     result.style.backgroundColor = color;
+            // }
+        </script>
+    </body>
+</html>

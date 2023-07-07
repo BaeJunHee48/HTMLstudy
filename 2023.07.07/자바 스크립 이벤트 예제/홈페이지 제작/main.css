@@ -1,0 +1,61 @@
+@charset "utf-8";
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul,
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.ward {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+}
+/* 헤드 */
+.top{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: rgb(199, 199, 199);
+    border-bottom: 2px solid #333;
+}
+.top .logo{
+    position: relative;
+    display: block;
+    margin: 20px;
+}
+.sub-menu {
+    width: 40%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sub-menu ul li {
+    padding: 30px;
+    display: inline-block;
+    border-left: 1px solid #8a8a8a;
+}
+.sub-menu ul li:last-child{
+    border-right: 1px solid #8a8a8a;
+}
+/* 바디 */
+.body{
+    background-color: aqua;
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+}
+.body .main-img{
+    background: url(../홈페이지\ 제작/
+    position: relative;
+
+}
