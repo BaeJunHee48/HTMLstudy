@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>날짜 정보 객체</title>
+    </head>
+    <body>
+        <script>
+            var tv = new Object();
+            tv.color = "white";
+            tv.price = "300000";
+            tv.info = function () {
+                document.write(`tv 색상 : ${this.color}   <br>`);
+                document.write(`tv 가격 : ${this.price}   <br>`);
+            };
+            var car = {
+                color: "black",
+                price: 500000,
+                info: function () {
+                    document.write(`car색상 :${this.color} <br> `);
+                    document.write(`car가격 :${this.price} <br> `);
+                },
+            };
+            document.write(`<h1>tv 객체 매서드 호출`);
+            tv.info();
+            document.write(`<h1>car 객체 매서드 호출`);
+            car.info();
+        </script>
+    </body>
+</html>

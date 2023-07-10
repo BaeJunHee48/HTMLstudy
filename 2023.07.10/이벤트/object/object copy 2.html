@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>날짜 정보 객체</title>
+    </head>
+    <body>
+        <!-- new 객체명 -->
+        <script>
+            var today = new Date();
+            // console.log(today.toLocaleTimeString());
+            var nowMonth = today.getMonth(),
+                nowDate = today.getDate(),
+                nowDay = today.getDay();
+            document.write("<h1>오늘 날짜 정보 </h1>");
+            document.write(`현재 월: ${nowMonth} 입니다.<br>`);
+            document.write(`현재 일:${nowDate} 입니다.<br>`);
+            document.write(`현재 요일:${nowDay} 입니다.<br>`);
+
+            // -------------------------------------------------------------
+            
+            var worldcup = new Date(2002, 4, 31);
+            var theMonth = worldcup.getMonth(),
+            theDate = worldcup.getDate(),
+            theDay = worldcup.getDay();
+            
+            var weekdays  = ["일","월","화","수","목","금","토",];
+            var dayName = weekdays[theDay]
+            
+            document.write(`<h1>월드컵 날짜 정보 </h1>`)
+            document.write(`2002년 월드컵은 몇 ${theMonth}월 입니다.<br>`);
+            document.write(`2002년 월드컵은 몇 ${theDate}일 입니다.<br>`);
+            document.write(`2002년 월드컵은 몇 ${theDay}요일 입니다.<br>`);
+        </script>
+    </body>
+</html>
