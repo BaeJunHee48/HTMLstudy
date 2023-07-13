@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>데이터 가져오기</title>
+  
+</head>
+<body>
+   <button data-mov="2023">영화 개봉 년도</button>
+   <button data-mov="7">영화 개봉 월</button>
+   <script>
+      const btnEls = document.querySelectorAll("button");
+      // console.log(btnEls);
+      btnEls.forEach(function(el){
+         console.log(el.dataset); // 이름 : 값
+         console.log(el.dataset.mov);
+         el.dataset.mov = 0
+      })
+   </script>
+</body>
+</html>
