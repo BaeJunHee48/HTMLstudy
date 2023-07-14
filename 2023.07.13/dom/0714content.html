@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>콘텐츠 가져오기</title>
+        <style></style>
+    </head>
+    <body>
+        <p id="title">Hi, <span style="display: none;"> Javascript! </span></p>
+        <script>
+            // document.getElementById("title").textContent;
+            // document.getElementById("title").innerText;
+            document.getElementById("title").innerHTML;
+
+            console.log(document.getElementById("title").textContent)
+            // 스타일 등 모든것을 무시하고 보여준다.
+            console.log(document.getElementById("title").innerText)
+            // 화면에 보이는 그대로만 보여준다.
+            console.log(document.getElementById("title").innerHTML)
+            // 코드까지 보여준다.
+        </script>
+    </body>
+</html>
