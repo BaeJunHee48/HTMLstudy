@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>li 추가</title>
+    </head>
+    <body>
+        <h1>할일 목록</h1>
+        <ul id="itmeList">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ul>
+        <div id="info"></div>
+    </body>
+    <script>
+        function addNewItem() {
+            var itmeList = document.getElementById("itmeList");
+            // 새로운 <li>요소 생성
+            var nowItme = document.createElement("li");
+            // 새로운 내용을 가져오는것
+            var task = prompt("새로운 할일 입력하세요.");
+            // 새로운 텍스트 노드를 생성
+            var textNode = document.createTextNode(task);
+            // <li>요소에 텍스트 노드를 추가
+            nowItme.appendChild(textNode);
+            itmeList.appendChild(nowItme);
+        }
+        // 새로운 할일 항목 추가 함수 호출
+        addNewItem();
+    </script>
+</html>

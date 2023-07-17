@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>할일 목록</h1>
+        <ul id="taskList">
+            <!-- 할일이 여기에 동적으로 추가 됩니다. -->
+        </ul>
+    </body>
+    <script>
+        function addTask(task) {
+            var taskList = document.getElementById("taskList");
+            // 새로운 <li>요소 생성
+            var nowTask = document.createElement("li");
+            // <li>요소에 텍스트 콘텐츠 설정
+            nowTask.textContent = task;
+            // <li>요소를 <ul>요소에 추가
+
+            taskList.appendChild(nowTask);
+        }
+        addTask("청소하기");
+        addTask("옷 사러가기");
+        addTask("물건 전달하기");
+        addTask("공부하기");
+        addTask("저녁준비");
+    </script>
+</html>

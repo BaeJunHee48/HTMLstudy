@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM Nide2</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>DOM을 공부 합시다</h1>
+            <a href="#" onclick="addp()" ; this.onclick="" ;>더보기</a>
+            <div id="info"></div>
+        </div>
+    </body>
+    <script>
+        function addp() {
+            var nowP = document.createElement("p");
+            // p라는 가상의 공간을 만들고 그것을 nowP로 지정한다.
+            var textNode = document.createTextNode("DOM은 Document Object Model의 줄인말입니다.");
+            // createTextNode로 텍스트를 정하고 그것을 textNode로 지정한다.
+            nowP.appendChild(textNode);
+            // nowP에textNode를 넣는다 (nowP = textNode)
+            document.getElementById("info").appendChild(nowP);
+            //(nowP = textNode)를 #info로 최종 출력한다.
+        }
+    </script>
+</html>
