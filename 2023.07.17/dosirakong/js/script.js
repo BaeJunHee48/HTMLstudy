@@ -153,7 +153,7 @@ window.onload = function () {
     },
   });
   //   business-modal 기능
-  var businessModal = document.querySelector("business-modal");
+  var businessModal = document.querySelector(".business-modal");
   businessModal.addEventListener("click", function () {
     businessModal.style.display = "none";
   });
