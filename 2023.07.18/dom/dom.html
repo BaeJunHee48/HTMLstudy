@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOPM 요소 추가</title>
+  </head>
+  <body>
+    <!-- <p class = "accent">주문이 완료되었습니다.</p> -->
+    <script>
+      var newP = document.createElement("p"); //자식
+      //   console.log(neP);
+      var newText = document.createTextNode("주문이 완료 되었습니다."); //부모
+      // console.log(newText);
+      // 부모에(.) appendChild(자식)
+      // newP.appendChild(newText);
+      // console.log(newP.appendChild(newText));
+      document.body.appendChild(newP);
+      // console.log(newP);
+      var attr = document.createAttribute("class");
+      attr.value = "accent";
+      // console.log(attr);
+      newP.setAttributeNode(attr);
+      console.log(newP);
+    </script>
+  </body>
+</html>

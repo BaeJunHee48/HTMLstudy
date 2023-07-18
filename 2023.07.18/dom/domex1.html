@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>참가 신청 목록</title>
+    <style>
+      #container {
+        width: 500px;
+        margin: 20px auto;
+      }
+      h1 {
+        font-size: 2.5em;
+        text-align: center;
+      }
+      form {
+        margin-top: 50px;
+      }
+      input[type="text"] {
+        float: left;
+        width: 300px;
+        padding: 12px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        font-size: 20px;
+      }
+      input:focus {
+        outline: none;
+      }
+      button {
+        width: 100px;
+        border: 1px solid #ccc;
+        border-radius: 7px;
+        padding: 12px;
+        margin-left: 30px;
+        font-size: 20px;
+      }
+      button:hover {
+        background-color: #ccc;
+      }
+      hr {
+        clear: both;
+        visibility: hidden;
+      }
+      #namelist {
+        font-size: 20px;
+        text-indent: 50px;
+        line-height: 1.5;
+      }
+      .del {
+        font-size: 20px;
+        text-align: center;
+        color: #ccc;
+        background-color: transparent;
+        float: right;
+        margin-right: 10px;
+      }
+      .del:hover{
+        color: #222;
+        cursor: pointer;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>참가신청</h1>
+      <form action="">
+        <!-- 1. 버튼 이벤트 함수  지정하기 -->
+        <input
+          type="text"
+          id="userName"
+          placeholder="이름"
+          required
+          autocomplete=" off"
+        />
+        <button onclick="newRegister(); return false">신청</button>
+      </form>
+      <hr />
+      <div id="nameList"></div>
+    </div>
+    <script>
+      // 2. 이벤트 함수 정의하기
+      function newRegister() {
+        // 새로운 <p>테그 생성
+        var newP = document.createElement("p");
+        // 삭제할 요소 만들기
+        // span 요소 생성
+        var delBtn = document.createElement("span");
+        var delText = document.createTextNode("X");
+        delBtn.setAttribute("class", "del");
+        // console.log(delBtn);
+        delBtn.appendChild(delText);
+        newP.appendChild(delBtn);
+        // console.log(delBtn);
+
+        var userName = document.querySelector("#userName");
+        // 새 텍스트 노드 만들기
+        var newText = document.createTextNode(userName.value);
+        // 텍스트 노드를 p요소에 자식요소를 연결 합니다.
+        newP.appendChild(newText);
+        // console.log(newP);
+        var nameList = document.querySelector("#nameList");
+        // nameList.appendChild(newP);
+        nameList.insertBefore(newP, nameList.childNodes[0]);
+        // console.log(nameList);
+        // 작성하고 남은 것을 제거
+        userName.value = "";
+        var renoveBttns = document.querySelectorAll(".del");
+        for (var i = 0; i < renoveBttns.Iength; i++) {
+          renoveBttns[i].addEventListener("click", function () {
+            if (this.parentNode.parentNode) {
+              this.parentNode.parentNode.renoveChild(this.parentNode);
+            }
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
