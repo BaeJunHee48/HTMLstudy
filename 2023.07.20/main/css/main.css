@@ -241,10 +241,10 @@ body {
   display: block;
   font-size: 17px;
   color: #000;
-  font-weight: 500;
   border: 0;
   background-color: transparent;
   line-height: 19px;
+  font-weight: 500 !important;
   cursor: pointer;
 }
 .all-bt i {
