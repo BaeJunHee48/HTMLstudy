@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼 타입 검증</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        border: 2px solid #222;
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        text-align: center;
+        /* background-color: antiquewhite; */
+      }
+      .ward {
+        /* background-color: #989898; */
+        height: 100%;
+        width: 80%;
+        margin: 0 auto;
+        /* background-color: azure; */
+      }
+      .ward h1 {
+        padding-top: 20px;
+      }
+      .ward h3 {
+        position: relative;
+        display: flex;
+        margin: 20px;
+      }
+      .ward input {
+        height: 30px;
+        width: 350px;
+      }
+      .ward button {
+        margin: 10px auto;
+        display: block;
+        position: relative;
+        width: 350px;
+        height: 30px;
+        border: none;
+        background-color: rgb(206, 206, 255);
+      }
+      .error-message-email,
+      .error-message-call,
+      .error-message-url {
+        display: none;
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="ward">
+      <h1>폼 타입 검증</h1>
+      <div class="email">
+        <form onsubmit="return validateForm()">
+          <label for="email"> <h3>Email:</h3></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="이메일 주소를 입력하세요"
+          />
+          <button type="submit">제출하기</button>
+          <p id="error-message-email" class="error-message-email">
+            올바른 이메일 주소를 입력해주세요.
+          </p>
+        </form>
+      </div>
+      <div class="call">
+        <form onsubmit="return validateForm()">
+          <label for="call"> <h3>전화번호:</h3></label>
+          <input
+            type="number"
+            id="number"
+            name="number"
+            required
+            placeholder="유효한 전화번호를 입렵하세요 (예: 010-1234-5678)"
+          />
+          <button type="submit">제출하기</button>
+          <p id="error-message-call" class="error-message-call">
+            올바른 전화 번호를 입력해주세요.
+          </p>
+        </form>
+      </div>
+      <div class="URL">
+        <form onsubmit="return validateForm()">
+          <label for="URL"> <h3>URL:</h3></label>
+          <input
+            type="URL"
+            id="URL"
+            name="URL"
+            required
+            placeholder="유효한 URL을 입렵하세요 (예: https //www.naver.com)"
+          />
+          <button type="submit">제출하기</button>
+          <p id="error-message-url" class="error-message-url">
+            올바른 URL을 입력해주세요.
+          </p>
+        </form>
+      </div>
+    </div>
+    <script>
+      function validateForm() {
+        var emailInput = document.getElementById("email");
+        var errorMessage = document.getElementById("error-message-email");
+        // 사용자가 입력한 이메일 주소
+        var email = emailInput.value;
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // 이메일 주소가 유효한지 확인
+        if (!emailRegex.test(email)) {
+          errorMessage.style.display = "block"; //오류메시지 표시
+          return false; //폼 제출 방지
+        } else {
+          errorMessage.style.display = "none";
+          return true; //폼 제출 방지
+        }
+      }
+    </script>
+  </body>
+</html>
