@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수강신청하기</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgb(245, 241, 235);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form fieldset {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        label.reg {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        label input[type="radio"],
+        label input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 3px;
+            cursor: pointer;
+            border: 0;
+        }
+
+        #confirmation {
+            /* display: none; */
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+
+        }
+
+        #confirmation h2 {
+            margin-top: 0px;
+        }
+
+        #confirmation ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>수강신청</h1>
+        <form name="testForm" id="testForm">
+            <fieldset>
+                <legend>신청인</legend>
+                <ul>
+                    <li>
+                        <label for="userName" class="reg">이름</label>
+                        <input type="text" id="userName" name="userName" maxlength="50">
+                    </li>
+                    <li>
+                        <label for="class" class="reg">학과</label>
+                        <select name="major" id="major" onchange="displaySelect()">
+                            <option> ---- 학과 선택 ----</option>
+                            <option value="건축공학과">건축공학과</option>
+                            <option value="기계공학과">기계공학과</option>
+                            <option value="산업공학과">산업공학과</option>
+                            <option value="전기전자공학과">전기전자공학과</option>
+                            <option value="컴퓨터공학과">컴퓨터공학과</option>
+                            <option value="화학공학과">화학공학과</option>
+                        </select>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>신청과목</legend>
+                <p>이 달에 신청할 과목을 선택하세요.</p>
+                <label> <input type="radio" name="subject" value="회화">회화</label>
+                <label> <input type="radio" name="subject" value="문법">문법</label>
+                <label> <input type="radio" name="subject" value="작문">작문</label>
+            </fieldset>
+            <fieldset>
+                <legend>메일링</legend>
+                <p>메일로 받고 싶은 뉴스 주제를 선택해 주세요</p>
+                <label><input type="checkbox" name="mailing1" value="news">해외단신 </label>
+                <label><input type="checkbox" name="mailing2" value="dialog">5분 회화 </label>
+                <label><input type="checkbox" name="mailing3" value="pops">모닝팝스 </label>
+            </fieldset>
+            <button type="button" onclick="showConfirmation()">제출</button>
+            <button type="button" onclick="concelForm()">취소</button>
+        </form>
+        <div id="confirmation"></div>
+    </div>
+    <script>
+        function displaySelect() {
+
+        }
+        function showConfirmation() {
+            const form = document.getElementById("testForm");
+            const confirmation = document.getElementById("confirmation");
+            // 입력된 폼 테이터 가져요기
+            const userName = form.userName.value;
+            const major = form.major.value;
+            const subject = form.subject.value;
+            const mailing1 = form.mailing1.checked;
+            const mailing2 = form.mailing2.checked;
+            const mailing3 = form.mailing3.checked;
+            // 확인 메시지 생성
+            const confirmationMessage = `
+            <h2>수강신청 내용 확인 </h2>
+            <p><strong> 이름:</strong> ${userName} </p>
+            <p><strong> 학과:</strong> ${major} </p>
+            <p><strong> 신청 과목:</strong> ${subject} </p>
+            <p><strong> 메일링:</strong></p>
+            <ul>
+                <li> ${mailing1 ? "해외 단신" : ""} </li>
+                <li> ${mailing2 ? "5분 회화" : ""}</li>
+                <li> ${mailing3 ? "모닝 팝스" : ""} </li>
+                </ul>
+
+            `;
+            // 확인메시지 표시 및 폼 숨기기
+            confirmation.innerHTML = confirmationMessage;
+            form.style.display = "none"
+            confirmation.style.display = "block"
+
+
+        }
+        function concelForm() {
+            const form = document.getElementById('testForm');
+            const confirmation = document.getElementById("confirmation");
+            // 폼초기화
+            form.reset()
+            // 확인 메시지 숨기고/ 확인메시지 폼표시
+            confirmation.style.display = "none"
+            form.style.display = "block"
+
+        }
+
+    </script>
+</body>
+
+</html>
