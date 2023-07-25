@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>피자 주문 연습문제1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrad{
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 50px;
+            background-color: cadetblue;
+        }
+        .wrad h1{
+            padding:  20px;           
+        }
+        .main{
+            padding: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="wrad">
+        <h1>
+        피자 주문
+        </h1>
+        <div class="main">
+          <fieldset>
+            <label> 사이즈 </label>
+            <p>Large - 24000원</p>
+          </fieldset>
+          <fieldset>
+            <legend>추가 주문</legend>
+            <label
+              ><input type="checkbox" name="mailing1" value="news" />피클(800원)
+            </label>
+            <label
+              ><input type="checkbox" name="mailing1" value="news" />칠리
+              소스(300원)
+            </label>
+            <label
+              ><input type="checkbox" name="mailing1" value="news" />디핑
+              소스(200원)
+            </label>
+            <label
+              ><input type="checkbox" name="mailing1" value="news" />치즈
+              스틱(4개, 4800원)
+            </label>
+            <label
+              ><input type="checkbox" name="mailing1" value="news" />콘
+              셀러드(2400원)
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>합계</legend>
+            <div id="confirmation"></div>
+          </fieldset>
+        </div>
+      </h1>
+    </div>
+  </body>
+</html>

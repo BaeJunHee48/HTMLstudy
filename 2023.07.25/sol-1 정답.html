@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>피자 주문 연습문제1 정답</title>
+    <style>
+#content{
+  width: 400px;
+  margin: 0 auto;
+  background-color: antiquewhite;
+  padding: 20px;
+}
+fieldset{
+  margin-bottom: 20px;
+  border: 1px solid #b6b5b5;
+}
+#total{
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+    </style>
+  </head>
+  <body>
+    <div id="content">
+        <h1>
+        피자 주문
+        </h1>
+
+          <fieldset>
+            <legend> 사이즈 </legend>
+            <p>Large - 24000원</p>
+          </fieldset>
+          <fieldset>
+            <legend>추가 주문</legend>
+            <label for="pickle">
+              <input type="checkbox" id="pickle" class="checkbox" name="pickle" value="800"> 피클 (800원)
+            </label>
+            <label for="chilly">
+              <input type="checkbox" id="chilly" class="checkbox" name="chilly" value="300"> 칠리소스 (300원)
+            </label>
+            <label for="deeping">
+              <input type="checkbox" id="deeping" class="checkbox" name="deeping" value="200"> 디핑 소스 (200원)
+            </label>
+            <label for="stick">
+              <input type="checkbox" id="stick" class="checkbox" name="stick" value="4000"> 치즈스틱 (4개, 4000원)
+            </label>
+            <label for="salad">
+              <input type="checkbox" id="salad" class="checkbox" name="salad" value="2400"> 콘 셀러드 (2400원)
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>
+              합계
+              
+            </legend>
+            <input type="text" id="total" name="total" class="price" readonly>
+    </div>
+    <script>
+      var price = 24000;
+      var sideMenu = document.querySelectorAll(".checkbox");
+      var total = document.querySelector("#total");
+      // price 변수 = 자체적으로 콤마기능 추가
+      // price = price.toLocaleString()
+      total.value = `${price}원`
+      
+      for(i=0; i < sideMenu.length; i++){
+        sideMenu[i].onclick = function(){
+          if(this.checked == true){
+            price += parseInt(this.value)
+            
+          }else{
+            price -= parseInt(this.value);
+          }
+          total.value = `${price}원`
+        }
+      }
+    </script>
+  </body>
+</html>

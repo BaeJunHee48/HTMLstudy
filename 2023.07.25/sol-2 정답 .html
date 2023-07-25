@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제2 정답</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      h1 {
+        text-align: center;
+      }
+      #content {
+        width: 300px;
+        margin: 50px auto;
+        background-color: antiquewhite;
+        padding: 20px;
+      }
+      #start {
+        border: 1px solid rgb(37, 37, 37);
+        background-color: #eee;
+        border-radius: 5px;
+        margin-left: 15px;
+        padding: 15px 30px;
+      }
+      hr {
+        width: 250px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+      }
+      input[type="text"] {
+        height: 50px;
+        border: 2px solid #999999;
+        border-radius: 10px;
+        padding-left: 0px;
+      }
+      #round {
+        width: 150px;
+      }
+      #round,
+      #area {
+        width: 250px;
+      }
+      #calc > p {
+        line-height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>원둘래와 넓이 계산</h1>
+    <div id="content">
+      <form>
+        <div id="calc">
+          <p>
+            반지름 : <br />
+            <input type="text" id="radius" name="radius" />
+            <button id="start">계산</button>
+          </p>
+          <hr />
+          <p>
+            원 둘레 : <br />
+            <input type="text" id="round" />
+          </p>
+          <p>
+            원 넓이 : <br />
+            <input type="text" id="area" />
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      var radius = document.querySelector("#radius");
+      var start = document.querySelector("#start");
+
+      start.addEventListener("click", function () {
+        // 원의 둘레
+        document.querySelector("#round").value =
+          Number(radius.value) * Math.PI * 2;
+        // 원의 넓이
+        document.querySelector("#area").value =
+          Math.PI * Number(radius.value) * Number(radius.value);
+      });
+    </script>
+  </body>
+</html>
