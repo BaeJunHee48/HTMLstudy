@@ -31,9 +31,13 @@ window.onload = function () {
       //
       VISUAL_ARR = obj.visual;
       TODAY_GOOD = obj.todaygood;
+      SALE_GOOD = obj.salegood;
+      NEW_GOOD = obj.newgood;
       // 비주얼 화면에 배치한다
       showVisual();
       showTodayGood();
+      showSaleGood();
+      showNewGood();
     }
   };
   // 자료를 호출한다.
@@ -48,6 +52,16 @@ window.onload = function () {
   let TODAY_GOOD;
   let todatlTag = document.getElementById("data-today");
   let todatlTag2 = document.getElementById("data-today2");
+  // 할인 상품
+  let SALE_GOOD;
+  let saleTag = document.getElementById("data-sale");
+  // 신상품
+  let NEW_GOOD;
+  let newTag = document.getElementById("data-new");
+  let newListTag = document.getElementById("data-new-list");
+
+  // ======================================
+
   // 비주얼 화면 출력 기능
   function showVisual() {
     let html = "";
@@ -113,7 +127,7 @@ window.onload = function () {
               >
               <!-- 제품 정보 -->
               <a href="${item.link}" class="good-info">
-                <em>콩콩 크림빵</em>(<em>${item.unit}개</em>)
+                <em>콩콩 크림빵</em>(<em>${item.unit}</em>)
               </a>
               <!-- 제품 가격 -->
               <a href="${item.link}" class="good-info-price"> ${priceToString(
@@ -141,7 +155,7 @@ window.onload = function () {
               >
               <!-- 제품 정보 -->
               <a href="${item.link}" class="good-info">
-                <em>콩콩 크림빵</em>(<em>${item.unit}개</em>)
+                <em>콩콩 크림빵</em>(<em>${item.unit}</em>)
               </a>
               <!-- 제품 가격 -->
               <a href="${item.link}" class="good-info-price"> ${priceToString(
@@ -156,6 +170,86 @@ window.onload = function () {
     todatlTag.innerHTML = htmlTop;
     todatlTag2.innerHTML = htmlBottom;
   }
+
+  // 할인 상품 화면 출력 기능
+  function showSaleGood() {
+    let html = `
+    <div class ="swiper sw-sale">
+    <div class ="swiper-wrapper">
+    `;
+    SALE_GOOD.forEach(function (item) {
+      let tag = `
+      <div class  = "swiper-slide">
+      <div class="good-box">
+      <!-- 제품 이미지 -->
+      <a href="${item.link}" class="good-img"
+        ><img src="images/${item.pic}" alt="${item.name}" />
+        <span class="good-type">인기</span></a
+      >
+      <!-- 제품 정보 -->
+      <a href="${item.link}" class="good-info">
+        <em>콩콩 크림빵</em>(<em>${item.unit}</em>)
+      </a>
+      <!-- 제품 가격 -->
+      <a href="${item.link}" class="good-info-price"> ${priceToString(
+        item.price
+      )} <em>원</em> </a>
+      <!-- 장바구니 이미지 -->
+      <button class="good-add-cart"></button>
+    </div>
+    
+    </div>      
+      `;
+      html += tag;
+    });
+    html += `
+    </div>
+    </div>`;
+    saleTag.innerHTML = html;
+    const swSale = new Swiper(".sw-sale", {
+      slidesPerView: 3,
+      spaceBetween: 16,
+      slidesPerGroup: 3,
+      navigation: {
+        prevEl: ".sale .slide-prev",
+        nextEl: ".sale .slide-next",
+      },
+      pagination: {
+        el: ".sale .slide-pg",
+        type: "fraction",
+      },
+    });
+  }
+
+  // 신상품 화면 출력 기능
+  function showNewGood() {
+    // 첫번째 화면 출력
+    let obj = NEW_GOOD[0];
+    let newGoodFist = `
+    <a href = "${obj.link}" class="new-img">
+    <img src="../images/${obj.pic}" alt = "${obj.titel}"/>
+    </a>
+    <a href = "${obj.link}" class="new-title">
+    ${obj.titel}
+    </a>
+    <a href = "${obj.link}" class="new-txt">
+    ${obj.txt}
+    </a>
+    `;
+    newTag.innerHTML = newGoodFist;
+    // 나머지 풀력 1~4번
+    let html = "";
+    NEW_GOOD.forEach(function (item, index) {
+      let tag = "";
+      // 0번은 출력을했음으로
+      if(index !== 0){
+        tag = `
+        
+        `
+      }
+    });
+  }
+  // ================================
 
   // 펼침 목록들 보기 기능
   // 더보기 목록기능
