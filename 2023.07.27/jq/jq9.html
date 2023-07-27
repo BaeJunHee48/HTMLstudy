@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>jquery9테스트</title>
+  </head>
+  <body>
+    <h1 class="title">선택지</h1>
+    <div>
+      <div>
+        <p class="txt1">내용</p>
+      </div>
+    </div>
+
+    <!-- 자바스크립트 -->
+    <script>
+      $(function(){
+        // closest()선택한 요소의 가장 가까운 조상요소를 선택한다.
+        $(".txx1").closest("div").css({"border" : "2px soild #f00"})
+      })
+    </script>
+  </body>
+</html>

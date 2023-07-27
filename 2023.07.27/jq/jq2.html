@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>jquery2테스트</title>
+  </head>
+  <body>
+    <div class="wrap_1">
+      <p>텍스트 1</p>
+      <p class="active">내용 2</p>
+      <p><a href="#">네이버</a></p>
+      <p><input type="text" value="Hello" /></p>
+    </div>
+    <div class="wrap_2">
+      <p>내용 5</p>
+      <p>내용 6</p>
+    </div>
+    <div class="wrap_3">
+      <div>
+        <p>내용 7</p>
+        <p>내용 8</p>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        $(".wrap_1 p:first").text("집에 가고싶다");
+        $(".wrap_1 p.active").removeClass("active").addClass("on");
+        $(".wrap_1 p:eq(2) a").attr("href", "http://naver.com");
+        $(".wrap_1 p:eq(3) input").val("korea");
+        $(".wrap_2 p:first").after("<p>======</p>");
+        $(".wrap_2 p:first").before("<p>*****</p>");
+        $(".wrap_3 p").unwrap().wrapInner("<strong/>");
+      });
+    </script>
+  </body>
+</html>

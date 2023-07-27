@@ -33,11 +33,16 @@ window.onload = function () {
       TODAY_GOOD = obj.todaygood;
       SALE_GOOD = obj.salegood;
       NEW_GOOD = obj.newgood;
+      RECOMMEND = obj.recommendgood;
+      POPULAR_ICON = obj.popularicon;
       // 비주얼 화면에 배치한다
       showVisual();
       showTodayGood();
       showSaleGood();
       showNewGood();
+      showRecommendGood();
+      // 인기물품 아이콘 화면 배친
+      showPoplarIconGood();
     }
   };
   // 자료를 호출한다.
@@ -55,10 +60,18 @@ window.onload = function () {
   // 할인 상품
   let SALE_GOOD;
   let saleTag = document.getElementById("data-sale");
+
   // 신상품
   let NEW_GOOD;
   let newTag = document.getElementById("data-new");
   let newListTag = document.getElementById("data-new-list");
+  // 알뜰 상품
+  let RECOMMEND;
+  let recommendTag = document.getElementById("data-recommend");
+
+  // 인기물품 아이콘 화면 출력 기능
+  let POPULAR_ICON;
+  let popularIconTag = document.getElementById("data-popular-icon");
 
   // ======================================
 
@@ -242,11 +255,105 @@ window.onload = function () {
     NEW_GOOD.forEach(function (item, index) {
       let tag = "";
       // 0번은 출력을했음으로
-      if(index !== 0){
+      if (index !== 0) {
         tag = `
-        
-        `
+        <div class="new-box">
+          <a href="${item.link}" class="new-box-img">
+            <img src="../images/${item.pic}" alt = "${item.titel}"/>
+          </a>
+          <a href="${item.link}" class="new-box-title">
+          ${item.title}
+          </a>
+    </div>
+        `;
       }
+      html += tag;
+    });
+    newListTag.innerHTML = html;
+  }
+
+  //(추천)알뜰삼품 화면 출력 기능
+  function showRecommendGood() {
+    let html = `
+    <div class ="swiper sw-recommend">
+    <div class ="swiper-wrapper">
+    `;
+    RECOMMEND.forEach(function (item) {
+      let tag = `
+      <div class  = "swiper-slide">
+      <div class="good-box">
+      <!-- 제품 이미지 -->
+      <a href="${item.link}" class="good-img"
+        ><img src="images/${item.pic}" alt="${item.name}" />
+        <span class="good-type">인기</span></a
+      >
+      <!-- 제품 정보 -->
+      <a href="${item.link}" class="good-info">
+        <em>콩콩 크림빵</em>(<em>${item.unit}</em>)
+      </a>
+      <!-- 제품 가격 -->
+      <a href="${item.link}" class="good-info-price"> ${priceToString(
+        item.price
+      )} <em>원</em> </a>
+      <!-- 장바구니 이미지 -->
+      <button class="good-add-cart"></button>
+    </div>
+    
+    </div>      
+      `;
+      html += tag;
+    });
+    html += `
+    </div>
+    </div>`;
+    recommendTag.innerHTML = html;
+    const swSale = new Swiper(".sw-recommend", {
+      slidesPerView: 3,
+      spaceBetween: 16,
+      slidesPerGroup: 3,
+      navigation: {
+        prevEl: ".recommend .slide-prev",
+        nextEl: ".recommend .slide-next",
+      },
+      pagination: {
+        el: ".recommend .slide-pg",
+        type: "fraction",
+      },
+    });
+  }
+
+  // 인기물품 아이콘 화면 출력 기능
+  function showPoplarIconGood() {
+    let html = `
+  <div class ="swiper sw-icon">
+    <div class ="swiper-wrapper">
+  `;
+    // 데이커처리
+    POPULAR_ICON.forEach(function (item) {
+      const tag = `
+    <div class = "swiper-slide">
+      <a href = "${item.link}">
+        <span class = "popular-cate-icon" style=
+      "background:url('../images/${item.icon}') no-repeat;
+      background-position:0px 0px;">
+      
+      </span>
+      <span class="popular-cate-name">${item.txt}</span>
+      </a>
+    </div>
+    `;
+      html += tag;
+    });
+    html += `</div></div>`;
+    popularIconTag.innerHTML = html;
+    const seIcon = new Swiper(".sw-icon", {
+      slidesPerView: 7,
+      slidesPerGroup: 7,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".popular-slide-next",
+        prevEl: ".popular-slide-prev",
+      },
     });
   }
   // ================================

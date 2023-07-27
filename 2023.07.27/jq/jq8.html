@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>jquery8테스트</title>
+  </head>
+  <body>
+    <h1 class="title">선택지</h1>
+    <section>
+      <div>
+        <p class="txt1">내용</p>
+      </div>
+    </section>
+    <section>
+      <div>
+        <p class="txt2">내용</p>
+      </div>
+    </section>
+    <!-- 자바스크립트 -->
+    <script>
+      $(function () {
+        // parents()모든 부모 요소들을 선택한다.
+        // 특정 부모 요소들을 선택하거나 조건을 지정하ㄴ여 원하는 부모요소들만 할수 잇다,
+        // $(".txt1").parents().css({ border: "2px dashed #00f" });
+        $(".txt2").parents("div").css({ border: "2px dashed #f00" });
+      });
+    </script>
+  </body>
+</html>

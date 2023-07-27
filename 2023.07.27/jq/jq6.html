@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>jquery4테스트</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <h1>인접 관계 선택자</h1>
+      <p>내용1</p>
+      <p class="txt">내용2</p>
+      <p>내용3</p>
+      <p>내용4</p>
+    </div>
+    <script>
+      $(function () {
+        var style_1 = {
+          "background-color": "#0ff",
+          border: "3px solid #f00",
+        };
+        var style_2 = {
+          "background-color": "#ff0",
+          border: "3px solid #f00",
+        };
+        // prev()메서드는 선택한 요소이 직전에 있는 형제 요소를 선택한다.
+        // $(".txt").prev().css(style_1)
+        //+ 형제 선택자로 바로 뒤에 있는 요소 선택
+        // $(".txt + p").css(style_2)
+        // .txt의 다음 다음의 css를 스타일 1번으로 변경하라.
+        // $(".txt").next().next().css(style_1)
+        // $(".txt").prevAll().css(style_1)
+        // $(".txt").prevAll().css(style_2)
+        // siblings()메서드는 선택한 요소의 모든 현제 요소를 선택한다.
+        $(".txt").siblings().css(style_1);
+      });
+    </script>
+  </body>
+</html>

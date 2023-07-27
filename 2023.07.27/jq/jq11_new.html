@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>jquery10</title>
+  </head>
+  <h1 class="title">탐색 선택자</h1>
+  <ul id="menu">
+    <li>내용1</li>
+    <li>내용2</li>
+    <li>내용3</li>
+    <li>내용4</li>
+  </ul>
+  <body>
+    <!-- 자바스크립트 -->
+    <script>
+      $(function () {
+        // $("#menu li").eq(2).css({
+        //   "background-color": "#ff0",
+        // });
+        // :lt() , :gt() 필터 선택자중의 하나 입니다.
+        // :lt() = 선택 요소중에 인덱스 보다 작은 요소의 인덱스를 찾아서 선택
+        // :gt() = 선택요소중에 인텍스보다 큰 인덱스를 가진 요소를 찾아서 선택
+        
+        $("#menu li:lt(2)").css({
+          "background-color": "#f00",
+        });
+        $("#menu li:gt(2)").css({
+          "background-color": "#f00",
+        });
+      });
+    </script>
+  </body>
+</html>

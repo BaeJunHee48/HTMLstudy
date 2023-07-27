@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>jquery4테스트</title>
+  </head>
+  <body>
+    <h1>인접 관계 선택자</h1>
+    <ul class="wrap">
+      <li>
+        리스트1
+        <ul>
+          <li id="list-1">리스트 1-1</li>
+          <li>리스트 1-2</li>
+        </ul>
+      </li>
+      <li>리스트 2</li>
+      <li>리스트 3</li>
+    </ul>
+    <script>
+      $(function(){
+        $("#list-1").parent().css("border","2px dashed #f00")
+      })
+    </script>
+  </body>
+</html>
