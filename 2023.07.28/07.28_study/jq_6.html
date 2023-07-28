@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+        $(function () {
+            var arr1 = [
+                {
+                    "area": "서울",
+                    "name": "무대리"
+                },
+                {
+                    "area": "부산",
+                    "name": "홍과장"
+                },
+                {
+                    "area": "대전",
+                    "name": "박사장"
+                },
+                {
+                    "area": "서울",
+                    "name": "빅마마"
+                }
+            ]
+            // $.map() 배열 또는 객체를 변형하여 새로운 배열또는 객체를 생성한다.
+            var arr2 = $.map(arr1, function (a, b) {
+                if (a.area == "서울") {
+                    return a;
+                }
+            });
+            console.log(arr2);
+            // $.grep() 함수가 순회할 배열입니다.
+            var arr3 = $.grep(arr1, function (a, b) {
+                if (a.area == "서울") {
+                    return true;
+                } else {
+                    return false
+                }
+
+            })
+        })
+    </script>
+</body>
+
+</html>

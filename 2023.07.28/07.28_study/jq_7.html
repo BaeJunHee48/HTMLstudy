@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+        $(function () {
+            var arr1 = ["서울", "대전", "부산", "전주"];
+            var arr2 = ["한국", "미국", "일본", "중국"];
+            var obj = {
+                "name": "정부장",
+                "area": "서울"
+            }
+            var idxNum = $.inArray("부산" , arr1)
+            console.log(idxNum);
+            // 배열이 맞는지 확인하는 용도
+            var okArray1 = $.isArray(arr1)
+            console.log(okArray1);
+            var okArray2 = $.isArray(obj)
+            console.log(okArray2);
+        })
+    </script>
+</body>
+
+</html>
