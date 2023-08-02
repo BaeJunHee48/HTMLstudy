@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>객체 조작 및 생성</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <p>
+      <button class="btn1">버튼1</button>
+    </p>
+    <p>내용1</p>
+    <p>
+      <button class="btn2">버튼2</button>
+    </p>
+    <p>내용2</p>
+    <script>
+      $(function () {
+        // .btn1을 클릭하면 실행하라
+        $(".btn1").click(function () {
+          // .bot1을 찾고 다음 CSS의 색상을 F00으로 변경하라.
+          $(".btn1").parent().next().css({ color: "#f00" });
+        });
+        $(".btn2").on({
+          "mouseover focus": function () {
+            $(".btn2").parent().next().css({ color: "#0f0" });
+          },
+        });
+        // $(".btn1").off("click");
+        // $(".btn2").off("click");
+      });
+    </script>
+  </body>
+</html>

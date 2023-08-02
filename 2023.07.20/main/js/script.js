@@ -37,6 +37,7 @@ window.onload = function () {
       POPULAR_ICON = obj.popularicon;
       POPULAR_GOOD = obj.populargood;
       BRAND_ARR = obj.brandarr;
+      BANNER_ARR = obj.bannerarr;
 
       // 비주얼 화면에 배치한다
       showVisual();
@@ -52,6 +53,8 @@ window.onload = function () {
       showPoplarGood();
       // 브랜드 목록을 화면에 배치
       showBrandArr();
+      // 배너 화면배치
+      showBannerArr();
     }
   };
   // 자료를 호출한다.
@@ -91,6 +94,9 @@ window.onload = function () {
   let BRAND_ARR;
   let brandTag = document.getElementById("data-brand");
 
+  // 배너 화면출력
+  let BANNER_ARR;
+  let bannerTag = document.getElementById("data-banner");
   // ======================================
 
   // 비주얼 화면 출력 기능
@@ -479,6 +485,42 @@ window.onload = function () {
         el: ".brand .slide-pg",
         type: "fraction",
       },
+    });
+  }
+
+  // 배너 화면 출력 기능
+  function showBannerArr() {
+    let html = `
+    <div class = "swiper sw-banner">
+    <div class = "swiper-wrapper">
+    `;
+    BANNER_ARR.forEach(function (item) {
+      let tag = `
+      <div class = "swiper-slide">
+      <a href="${item.link}">
+      <img src = "../images/${item.image}" alt = "${item.title}/>"
+      </a>
+      </div>
+      `;
+      html += tag;
+    });
+    html += `
+    </div>
+    </div>
+    `;
+    bannerTag.innerHTML = html;
+    const swBanner = new Swiper(".sw-banner", {
+      loop: true,
+      autoplay: {
+        deLay: 2500,
+        disableOnInteraction: false,
+      },
+      slidesPerView: 2,
+      spaceBetween: 0,
+      navigation:{
+        prevEl : ".banner .slid-prev",
+        nextEl : ".banner .slid-next"
+      }
     });
   }
   // ================================
