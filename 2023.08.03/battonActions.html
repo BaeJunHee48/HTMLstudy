@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>batton Actions</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+      }
+      .red {
+        background-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="btn">
+      <input type="button" value="append" class="append" />
+      <input type="button" value="remove" class="remove" />
+      <input type="button" value="show" class="show" />
+      <input type="button" value="hide" class="hide" />
+      <input type="button" value="toggle" class="toggle" />
+      <input type="button" value="fadein" class="fadein" />
+      <input type="button" value="fadeout" class="fadeout" />
+      <input type="button" value="fadetoggle" class="fadetoggle" />
+      <input type="button" value="addclass" class="addclass" />
+      <input type="button" value="removeclass" class="removeclass" />
+      <input type="button" value="toggleclass" class="toggleclass" />
+      <input type="button" value="slideup" class="slideup" />
+      <input type="button" value="slidedown" class="slidedown" />
+      <input type="button" value="slidetoggle" class="slidetoggle" />
+    </div>
+    <div class="content"></div>
+
+    <script>
+      $(function () {
+        $(".append").click(() => {
+          $(".content").append(`<div class="box"></div>`);
+          $(".box").last().css("background-color", makeColor());
+        });
+        function makeColor() {
+          const randomColor =
+            "#" + Math.round(Math.random() * 0xffffff).toString(16);
+          return randomColor;
+        }
+        // Remoce = 삭제
+        $(".remove").click(() => {
+          $(".box").remove();
+        });
+        // Show = 보이는것
+        $(".show").click(() => {
+          $(".box").show();
+        });
+        // Hide = 안보이게
+        $(".hide").click(() => {
+          $(".box").hide();
+        });
+        // Toggle = 토글
+        $(".toggle").click(() => {
+          $(".box").toggle();
+        });
+        // fadein = 자연스럽게 보이게 하는것
+        $(".fadein").click(() => {
+          $(".box").fadeIn(2000);
+        });
+        // fadeout = 자연스럽게 안보이게 하는것
+        $(".fadeout").click(() => {
+          $(".box").fadeOut(1000);
+        });
+        // fadetoggle = 자연스럽게 토글 역할을 하는것
+        $(".fadetoggle").click(() => {
+          $(".box").fadetoggle(3000);
+        });
+        // addclass = 빈곳에 red를 넣는다.
+        $(".addclass").click(() => {
+          $(".box").addClass("red");
+        });
+        // removeclass = addClass를 삭제한다.
+        $(".removeclass").click(() => {
+          $(".box").removeClass("red");
+        });
+        // toggleclass = 빈곳에 red를 토글화 시킨다.
+        $(".toggleclass").click(() => {
+          $(".box").toggleClass("red");
+        });
+        // slideup = 만들어 진것을 위로 올린다(up)
+        $(".slideup").click(() => {
+          $(".box").slideUp();
+        });
+        // slideup = 만들어 진것을 위로 올린다(up)
+        $(".slideup").click(() => {
+          $(".box").slideUp();
+        });
+        // slidedown = slideup했는것을 아래로 내린다(down).
+        $(".slidedown").click(() => {
+          $(".box").slideDown();
+        });
+        $(".slidetoggle").click(() => {
+          $(".content div").each(function (index, item) {
+            $(item).text(index);
+          });
+          $(".box:even").slideToggle();
+        });
+      });
+    </script>
+  </body>
+</html>
