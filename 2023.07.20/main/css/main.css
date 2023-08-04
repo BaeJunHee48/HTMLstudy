@@ -43,16 +43,16 @@ body {
   width: 1200px;
   margin: 0 auto;
 }
-/* swiper 기본 셋팅 */
+/* swiper기본 셋팅 */
 .swiper {
   width: 100%;
   height: 100%;
 }
-/* section 레이아웃 공통 패딩 */
+/* section 레이아웃 공통 패팅 */
 .wrap > section {
   padding: 80px 0;
 }
-/* 타이틀 레이아웃 */
+/* 타이틀 레이웃 */
 .section-title {
   position: relative;
   display: block;
@@ -92,23 +92,23 @@ body {
   border: 1px solid #bbb;
   background-color: #fff;
   color: #666;
-  transition: background 0.2s;
+  font-size: 13px;
+  transition: background 0.5s;
 }
 .section-bt:hover {
-  background-color: #e0e0e0;
-  color: #fff;
+  background: #f9f9f9;
 }
 .slide-control {
   position: relative;
   display: block;
   width: 140px;
-  margin-top: 10px;
-  text-align: center;
+  margin-top: 0px;
 }
 .slide-prev,
 .slide-next {
   position: absolute;
   top: 0;
+  display: block;
   width: 26px;
   height: 20px;
   border: 0;
@@ -117,7 +117,7 @@ body {
   background: transparent;
 }
 .slide-prev {
-  background: url(../images/swiperArrP.png) no-repeat;
+  background: url("../images/swiperArrP.png") no-repeat;
   left: 0;
 }
 .slide-prev:hover {
@@ -125,10 +125,16 @@ body {
 }
 .slide-next {
   right: 0;
-  background: url(../images/swiperArrN.png) no-repeat;
+  background: url("../images/swiperArrN.png") no-repeat;
 }
 .slide-next:hover {
   background-position: 0px -20px;
+}
+.slide-pg {
+  position: relative;
+  display: block;
+  text-align: center;
+  bottom: 0 !important;
 }
 /* 전체레이아웃 */
 .wrap {
@@ -136,7 +142,7 @@ body {
   display: block;
   /* 헤더가 fix가 되므로 레이아웃용 */
   padding-top: 128px;
-  transition: padding-top 0.2;
+  transition: padding-top 0.2s;
 }
 .header.active {
   top: -61px;
@@ -352,6 +358,7 @@ body {
   left: 0;
   top: 41px;
   width: 210px;
+  background-color: #fff;
   height: 0;
   border: 1px solid #ddd;
   box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
@@ -392,9 +399,10 @@ body {
 .cate-list > li > a::after {
   content: "";
   position: absolute;
+  /* top: calc(50% - 5px); */
+  top: 50%;
   transform: translateY(-50%);
   right: 20px;
-  top: 50%;
   width: 6px;
   height: 10px;
   background: url("../images/icoGnbArr1.png") no-repeat 0 -10px;
@@ -420,9 +428,8 @@ body {
   bottom: 0;
   display: block;
   height: 1px;
-  background-color: #ddd;
-  /* background-color: #ff9933; */
   width: calc(100% - 24px - 24px);
+  background-color: #ddd;
 }
 .theme-list > li:first-child::before {
   content: "";
@@ -431,8 +438,8 @@ body {
   top: 0;
   display: block;
   height: 1px;
-  background-color: #666;
   width: calc(100% - 24px - 24px);
+  background-color: #666;
 }
 .theme-list > li:last-child::after {
   background-color: #666;
@@ -445,9 +452,10 @@ body {
 .theme-list > li > a::after {
   content: "";
   position: absolute;
+  /* top: calc(50% - 5px); */
+  top: 50%;
   transform: translateY(-50%);
   right: 20px;
-  top: 50%;
   width: 6px;
   height: 10px;
   background: url("../images/icoGnbArr1.png") no-repeat 0 0px;
@@ -482,9 +490,10 @@ body {
 .deli-list > li > a::after {
   content: "";
   position: absolute;
+  /* top: calc(50% - 5px); */
+  top: 50%;
   transform: translateY(-50%);
   right: 20px;
-  top: 50%;
   width: 6px;
   height: 10px;
   background: url("../images/icoGnbArr1.png") no-repeat 0 0px;
@@ -504,7 +513,7 @@ body {
   top: 0;
   width: 100%;
   padding: 0 24px;
-  /* depth2를 한자리에 모으는 것 */
+  /* deoth2를 한자리에 모으는 것 */
 }
 .cate-depth2-list > li {
   font-size: 15px;
@@ -556,7 +565,7 @@ body {
   transform: translateX(-50%);
   top: 42px;
   border: 1px solid #ddd;
-  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+  box-shadow: 0px 3px 6px 0px rgb(0 0 0 / 16%);
   display: none;
 }
 .join-list > li,
@@ -675,8 +684,9 @@ body {
   text-align: center;
   color: #fff;
   background-color: #76bd42;
-  font-size: 11px;
+
   line-height: 18px;
+  font-size: 11px;
   font-weight: 700;
 }
 /* 비주얼 */
@@ -705,6 +715,7 @@ body {
   display: block;
   width: 100%;
   height: 100%;
+  background-color: #76bd42;
 }
 .visual-slide-page a {
   position: relative;
@@ -730,11 +741,13 @@ body {
   width: 64px;
   height: 64px;
   border-radius: 50%;
+  display: block;
   font-size: 0;
   cursor: pointer;
 }
 .visual-prev {
   left: calc(50% - 600px);
+  /* left: 50% ; */
   background: rgba(0, 0, 0, 0) url("../images/visualArrP.png") no-repeat;
   background-position: 0px -64px;
 }
@@ -780,7 +793,7 @@ body {
   height: 30px;
   background: url("../images/visualNum.png") no-repeat;
   text-align: center;
-  color: white !important;
+  color: #fff !important;
   line-height: 30px;
   font-size: 14px;
   font-weight: 700;
@@ -799,7 +812,7 @@ body {
   margin-left: 3px;
   float: left;
 }
-/*  오늘의 상품 */
+/* 오늘의 상품 */
 .today {
   position: relative;
   display: block;
@@ -836,6 +849,7 @@ body {
   top: 0;
   right: 0;
   width: 50px;
+  height: 50px;
   background-color: #76bd42;
   text-align: center;
   line-height: 50px;
@@ -879,14 +893,9 @@ body {
   border: 0;
   cursor: pointer;
 }
-.good-wrap {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
+
 .no-mb {
-  margin-bottom: 0 !important;
+  margin-bottom: 0;
 }
 /* 섹션 레이아웃 */
 .layout-wrap {
@@ -923,34 +932,30 @@ body {
   position: relative;
   display: block;
 }
-.new-left {
-  position: relative;
-  display: block;
-  width: calc(50% - 8px);
-  float: left;
-}
-.new-right {
-  position: relative;
-  display: block;
-  width: calc(50% - 8px);
-  float: right;
-}
 .new .section-bt {
   position: absolute;
   right: 0;
   bottom: 0;
 }
+
 .new-wrap {
   position: relative;
   display: block;
   border-bottom: 1px solid #eee;
   padding-bottom: 50px;
 }
+.new-left {
+  position: relative;
+  display: block;
+  width: calc(50% - 8px);
+  float: left;
+}
 .new-img {
   position: relative;
   display: block;
   height: 370px;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 .new-title {
   position: relative;
@@ -962,36 +967,40 @@ body {
 .new-txt {
   position: relative;
   display: block;
-  width: calc(50% - 8px);
   font-size: 17px;
+}
+.new-right {
+  position: relative;
+  display: block;
+  width: calc(50% - 8px);
+  float: right;
 }
 .new-box {
   position: relative;
   display: block;
   width: calc(50% - 8px);
-  overflow: hidden;
 }
 .new-box-img {
   position: relative;
   display: block;
   width: 100%;
   height: 180px;
+  overflow: hidden;
   margin-bottom: 15px;
 }
 .new-box-img img {
   position: absolute;
-  display: block;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 110%;
+  width: 102%;
 }
 .new-box-title {
   position: relative;
   display: block;
   font-size: 17px;
   font-weight: 500;
-  /* 말 줄임... 처리 */
+  /* 말줄임 ...처리 */
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1005,7 +1014,7 @@ body {
 .new-right .new-box:nth-child(2n) {
   float: right;
 }
-/* 추천 상품 */
+/* 추천물품  */
 .recommend {
   position: relative;
   display: block;
@@ -1019,11 +1028,10 @@ body {
 .blue {
   color: #76bd42;
 }
-/* 인기 물품 */
+/* 인기물품 */
 .popular {
   position: relative;
   display: block;
-  margin: 20px 0;
 }
 .popular-more {
   position: absolute;
@@ -1040,11 +1048,9 @@ body {
   transition: background 0.5s;
 }
 .popular-more:hover {
-  background: #8a8a8a;
-  color: #eeeeee;
+  background: #f9f9f9;
 }
 .popular-cate {
-  /* background-color: #ff9933; */
   display: block;
   position: relative;
   margin-bottom: 40px;
@@ -1060,17 +1066,14 @@ body {
 .popular-slide-prev {
   float: left;
 }
-.popular-slide-next {
-  float: right;
-}
 .popular-slide-prev span {
   position: absolute;
+  left: 0;
   top: 50%;
   transform: translateY(-50%);
-  left: 0;
   width: 26px;
   height: 20px;
-  background: url(../images/swiperArrP.png) no-repeat;
+  background: url("../images/swiperArrP.png") no-repeat;
   background-position: 0px 0px;
   font-size: 0;
   cursor: pointer;
@@ -1080,16 +1083,21 @@ body {
 }
 .popular-slide-next span {
   position: absolute;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
-  right: 0;
   width: 26px;
   height: 20px;
-  background: url(../images/swiperArrN.png) no-repeat;
+  background: url("../images/swiperArrN.png") no-repeat;
+  background-position: 0px 0px;
   font-size: 0;
+  cursor: pointer;
 }
 .popular-slide-next span:hover {
   background-position: 0px -20px;
+}
+.popular-slide-next {
+  float: right;
 }
 .popular-slide {
   position: relative;
@@ -1097,13 +1105,6 @@ body {
   width: calc(100% - 80px - 80px);
   height: 140px;
   float: left;
-  /* background-color: #707070; */
-}
-.popular-slide a {
-  position: relative;
-  display: block;
-  width: 140px;
-  height: 140px;
 }
 .popular-slide a {
   position: relative;
@@ -1113,6 +1114,7 @@ body {
   background-color: #f9f9f9;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0);
+  transition: all 0.3s;
 }
 .popular-slide a:hover {
   background-color: #fff;
@@ -1133,7 +1135,7 @@ body {
   text-align: center;
   white-space: nowrap;
 }
-/* 브렌드관 */
+/* 브랜드관 */
 .brand {
   position: relative;
   display: block;
@@ -1152,7 +1154,7 @@ body {
   width: 285px;
   height: 285px;
   background-color: #fff;
-  padding: 35px 30px;
+  padding: 35px 25px;
 }
 .brand-box a {
   position: relative;
@@ -1185,7 +1187,7 @@ body {
 .brand-info > li:last-child {
   border-right: 0;
 }
-.brand-info-totle {
+.brand-info-title {
   text-align: center;
   font-size: 16px;
   color: #666;
@@ -1194,7 +1196,7 @@ body {
 .brand-info-value {
   position: relative;
   display: block;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 }
 /* banner */
@@ -1238,12 +1240,12 @@ body {
 .banner-slide-next:hover {
   background-position: 0px -34px;
 }
-/* 제철 요리 */
-.season {
+/* 제철요리 */
+.season{
   position: relative;
   display: block;
 }
-.season-wrap {
+.season-wrap{
   position: relative;
   display: block;
 }
@@ -1254,21 +1256,21 @@ body {
   height: 420px;
   float: left;
 }
-.season-left a {
+.season-left a{
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-.season-left a img {
+.season-left a img{
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%);
   display: block;
 }
-.season-info {
+.season-info{
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1276,7 +1278,7 @@ body {
   font-size: 0;
   letter-spacing: 0;
 }
-.season-info h3 {
+.season-info h3{
   position: relative;
   display: inline-block;
   width: 150px;
@@ -1288,7 +1290,7 @@ body {
   padding: 95px 15px 25px 15px;
   vertical-align: -10px;
 }
-.season-info p {
+.season-info p{
   position: relative;
   display: inline-block;
   width: 490px;
@@ -1297,34 +1299,34 @@ body {
   padding: 40px 30px;
   white-space: nowrap;
 }
-.season-info p span {
+.season-info p span{
   position: relative;
   display: block;
   font-size: 25px;
   color: #333;
   margin-bottom: 20px;
 }
-.season-info p b {
+.season-info p b{
   position: relative;
   display: block;
   font-size: 30px;
-  font-weight: 70px;
+  font-weight: 700;
 }
-.season-right {
+.season-right{
   position: relative;
   display: block;
   width: calc(100% - 790px - 70px);
   float: right;
   /* background-color: #ff9933; */
 }
-.season-list {
+.season-list{
   position: relative;
   display: block;
   /* background-color: #cc5656; */
   border-bottom: 1px solid #ddd;
   padding-bottom: 15px;
 }
-/* Smooth Scrollbar 적용 */
+/* smooth scrollbar 적용 */
 .scrollbar-thumb {
   width: 8px !important;
   background: rgba(0, 0, 0, 0.5) !important;
@@ -1333,17 +1335,6 @@ body {
 .scrollbar-track {
   background: rgba(222, 222, 222, 0) !important;
 }
-/* .season-good-list::-webkit-scrollbar {
-  width: 8px !important;
-}
-.season-good-list::-webkit-scrollbar-track {
-  width: 8px !important;
-  background: rgba(0, 0, 0, 0.5) !important;
-  border-radius: 4px !important;
-}
-.season-good-list::-webkit-scrollbar-thumb {
-  background: rgba(222, 222, 222, 0) !important;
-} */
 .season-good-list {
   position: relative;
   display: block;
@@ -1351,34 +1342,38 @@ body {
   height: calc(85px * 3);
   overflow: auto;
 }
-.season-good {
+.season-good-list li{
+  position: relative;
+  display: block;
+}
+.season-good{
   position: relative;
   display: block;
   height: 70px;
   margin-bottom: 15px;
 }
-.season-good-check {
+.season-good-check{
   position: absolute;
   top: 0;
-  left: 0;
-  display: none;
+  left: -20000px;
+  display: block;
 }
-.season-label {
+.season-label{
   position: absolute;
   display: block;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  background: url(../images/inpCheck.png);
+  background: url("../images/inpCheck.png") no-repeat;
   width: 18px;
   height: 18px;
   font-size: 0;
   background-position: 0px 0px;
 }
-.season-good-check:checked + .season-label {
+.season-good-check:checked + .season-label{
   background-position: 0px -36px;
 }
-.season-good-img {
+.season-good-img{
   position: relative;
   display: block;
   width: 70px;
@@ -1387,52 +1382,52 @@ body {
   overflow: hidden;
   float: left;
 }
-.season-good-img > img {
+.season-good-img > img{
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%);
 }
-.season-good-info {
+.season-good-info{
   position: relative;
   display: block;
   /* background-color: #76bd42; */
   padding: 10px 20px;
   float: left;
 }
-.season-good-title {
-  position: relative;
-  display: block;
-  font-size: 15px;
-}
-.season-good-price {
+.season-good-title{
   position: relative;
   display: block;
   font-size: 13px;
 }
-.season-good-price em {
+.season-good-price{
+  position: relative;
+  display: block;
+  font-size: 13px;
+}
+.season-good-price em{
   position: relative;
   display: inline-block;
   font-style: normal;
   font-size: 20px;
 }
-.season-total {
+.season-total{
   display: block;
   position: relative;
 }
-.season-good-total {
+.season-good-total{
   display: block;
   position: relative;
-  background-color: #ff9933;
+  /* background-color: #ff9933; */
   padding-left: 40px;
   font-size: 20px;
   color: #000;
   margin: 30px 0;
 }
-.season-good-tota em {
+.season-good-total em{
   font-style: normal;
 }
-.buy-good {
+.buy-good{
   position: relative;
   display: block;
   border: 1px solid #ddd;
@@ -1442,4 +1437,267 @@ body {
 }
 .buy-good em {
   font-style: normal;
+}
+/* 이용후기 */
+.review{
+  position: relative;
+  display: block;
+  background-color: #fcf6f2;
+}
+.review .slide-control{
+  margin-top: 25px;
+}
+.review-slide{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 235px;
+}
+.review-box{
+  position: relative;
+  display: block;
+  width: 290px;
+  height: 100%;
+  background-color: #fff;
+  padding: 20px;
+}
+.review-box a{
+  position: relative;
+  display: block;
+}
+.review-box-desc{
+  position: relative;
+  display: block;
+  width: 100%;
+  /* background-color: #76bd42; */
+  height: 66px;
+  margin-bottom: 15px;
+}
+.review-box-title{
+  position: relative;
+  display: block;
+  font-size: 17px;
+  /* 말줄임 */
+  width: 165px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 5px;
+}
+.review-box-star{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 20px;
+  font-size: 17px;
+  font-weight: 500;
+  padding-left: 25px;
+}
+.review-box-star::before{
+  content: "";
+  background: url("../images/icoRating.png") no-repeat;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 18px;
+  height: 18px;
+}
+.review-box-img{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 66px;
+  height: 66px;
+  overflow: hidden;
+}
+.review-box-img img{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+}
+.review-box-txt{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 70px;
+  font-size: 13px;
+  /* 2줄 말줄임 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-bottom: 20px;
+}
+.review-box-user{
+  position: relative;
+  display: block;
+  font-size: 13px;
+}
+/* 커뮤니티 */
+.community{
+  position: relative;
+  display: block;
+}
+.community-notice{
+  position: relative;
+  display: block;
+  width: calc(100% / 3);
+  /* background-color: #76bd42; */
+  padding: 0 40px;
+  float: left;
+}
+.community-notice > dl{
+  display: block;
+  position: relative;
+}
+.community-notice > dl > dt {
+  display: block;
+  position: relative;
+  padding: 0 10px;
+  float: left;
+}
+.community-notice > dl > dt:nth-child(1){
+  padding-left: 0;
+  /* background-color: #ff9933; */
+}
+.community-notice > dl > dt:nth-child(1)::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 1px;
+  height: 18px;
+  background-color: #e5e5e5;
+}
+.community-bt {
+  position: relative;
+  display: block;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+  font-size: 20px;
+  color: #999;
+}
+.community-bt-active{
+  color: #000;
+  font-weight: 700;
+  
+}
+.community-info{
+  position: relative;
+  display: block;
+  width: calc(100% / 3);
+  padding: 0 40px;
+  float: left;
+}
+.community-info h3{
+  position: relative;
+  display: block;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.tel{
+  position: relative;
+  display: block;
+  font-size: 32px;
+  color: #76bd42;
+  margin-bottom: 15px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.community-info-list{
+  position: relative;
+  display: block;
+}
+.community-info-list li{
+  display: block;
+  position: relative;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.t1{
+  color: #666;
+}
+.t2{
+  color: #000;
+}
+.t3{
+  color: #000;
+}
+.community-info-list > li > a{
+  font-weight: 700;
+}
+.community-info-list > li > b{
+  font-weight: 700;
+}
+.community-help{
+  position: relative;
+  display: block;
+  width: calc(100% / 3);
+  padding: 0 40px;
+  float: left;
+}
+.community-help h3{
+  position: relative;
+  display: block;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.community-help-list{
+  position: relative;
+  display: block;
+
+}
+.community-help-list > li{
+  position: relative;
+  display: block;
+  width:calc(50% - 5px);
+  margin-bottom: 10px;
+}
+.community-help-list > li:nth-child(2n+1) {
+  float: left;
+}
+.community-help-list > li:nth-child(2n) {
+  float: right;
+}
+.community-help-list > li > a{
+  position: relative;
+  display: block;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  padding: 0 12px;
+  line-height: 36px;
+  font-size: 13px;
+  color: #333;
+}
+.community-help-list > li > a::after{
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 12px;
+  background: url("../images/icoFaq.png") no-repeat;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;
+}
+.community-line::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 1px;
+  height: 190px;
+  background-color: #ddd;
 }

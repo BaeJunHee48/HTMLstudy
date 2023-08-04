@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="css/slide.css" />
+    <title>슬라이드 응용</title>
+  </head>
+
+  <body>
+    <div id="banner">
+      <div class="banner_inner">
+        <h1>슬라이드</h1>
+        <div class="banner_list">
+          <ul class="slide_list">
+            <li>
+              <span><img src="" alt="" /></span>
+              <dl>
+                <dt>배너슬라이드 1</dt>
+                <dd>배너슬라이드입니다.<br />설명 및 내용 텍스트.</dd>
+              </dl>
+            </li>
+            <li>
+              <span><img src="" alt="" /></span>
+              <dl>
+                <dt>배너슬라이드 2</dt>
+                <dd>배너슬라이드입니다.<br />설명 및 내용 텍스트.</dd>
+              </dl>
+            </li>
+            <li>
+              <span><img src="" alt="" /></span>
+              <dl>
+                <dt>배너슬라이드 3</dt>
+                <dd>배너슬라이드입니다.<br />설명 및 내용 텍스트.</dd>
+              </dl>
+            </li>
+            <li>
+              <span><img src="" alt="" /></span>
+              <dl>
+                <dt>배너슬라이드 4</dt>
+                <dd>배너슬라이드입니다.<br />설명 및 내용 텍스트.</dd>
+              </dl>
+            </li>
+            <li>
+              <span><img src="" alt="" /></span>
+              <dl>
+                <dt>배너슬라이드 5</dt>
+                <dd>배너슬라이드입니다.<br />설명 및 내용 텍스트.</dd>
+              </dl>
+            </li>
+            <li>
+              <span><img src="" alt="" /></span>
+              <dl>
+                <dt>배너슬라이드 6</dt>
+                <dd>배너슬라이드입니다.<br />설명 및 내용 텍스트.</dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        $(".slide_list").bxSlider({
+          auto: true,
+          pager: false,
+          controls: true,
+          autoControls: false,
+          maxSlides: 4,
+          minSlides: 1,
+          slideWidth: 285,
+          slideMargin: 20,
+          autoHover: true,
+        });
+      });
+    </script>
+  </body>
+</html>

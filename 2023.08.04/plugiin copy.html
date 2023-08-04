@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+    <!-- <link rel="stylesheet" href="css/faq.css" /> -->
+    <title>plugin</title>
+    <style>
+      .layer_popup {
+        position: absolute;
+        left: 50px;
+        top: 50px;
+        cursor: move;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layer_popup">
+      <img src="images/pic_1.jpg" alt="바다" />
+    </div>
+    <!-- ==================================================== -->
+    <script>
+      $(function () {
+        $(".layer_popup").draggable();
+      });
+    </script>
+  </body>
+</html>

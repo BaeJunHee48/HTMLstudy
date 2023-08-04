@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/faq.css" />
+    <title>plugin</title>
+    <script src="js/jquery.js"></script>
+  </head>
+  <body>
+    <h1>질문 제목</h1>
+    <div class="faq">
+      <ul>
+        <li>
+          <p><button>Q1. 자주 묻는 질문 내용?</button></p>
+          <div>
+            <div class="cont">답변 내용 1</div>
+          </div>
+        </li>
+        <li>
+          <p><button>Q2. 자주 묻는 질문 내용?</button></p>
+          <div>
+            <div class="cont">답변 내용 2</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <h1>질문 제목2</h1>
+    <div class="faq">
+      <ul>
+        <li>
+          <p><button>Q1. 자주 묻는 질문 내용?</button></p>
+          <div>
+            <div class="cont">답변 내용 1</div>
+          </div>
+        </li>
+        <li>
+          <p><button>Q2. 자주 묻는 질문 내용?</button></p>
+          <div>
+            <div class="cont">답변 내용 2</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- ==================================================== -->
+    <script>
+      $(function () {
+        $.fn.extend({
+          faq: function () {
+            var ts = $(this);
+            $.each(ts, function (i, o) {
+              $("button", o).on("click", faqHanddler);
+              function faqHanddler() {
+                if ($(this).parent().next().is(":hidden")) {
+                  $("li>div:visible", o).hide();
+                  $(this).parent().next().show();
+                } else {
+                  $("li>div:visible", o).hide();
+                }
+              }
+            });
+          },
+        });
+        $(".faq").faq();
+      });
+    </script>
+  </body>
+</html>
