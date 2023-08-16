@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "utf-8";
 @import url("font.css");
 * {
   margin: 0;
@@ -29,8 +29,9 @@ body {
   letter-spacing: -0.64px;
   color: #191919;
   word-break: keep-all;
-  overflow: hidden;
+  overflow-x: hidden;
   min-width: 780px;
+  /* height: 1000px; */
 }
 /* 공통요소 */
 .wrap {
@@ -43,9 +44,9 @@ body {
   min-width: 640px;
   padding: 0 90px;
   margin: 0 auto;
-  /* background-color: brown; */
+  background-color: brown;
 }
-/* 주 메뉴 */
+/* 주메뉴 */
 .nav {
   position: fixed;
   left: 100%;
@@ -70,8 +71,8 @@ body {
   width: 23px;
   height: 23px;
   background: url("../images/close2.png") no-repeat center;
-  border: none;
   cursor: pointer;
+  border: none;
   font-size: 0;
 }
 .gnb {
@@ -102,13 +103,13 @@ body {
   display: block;
   padding-bottom: 20px;
 }
-.depth2 > li > a {
-  position: relative;
-  display: block;
-  font-size: 18px;
-  font-weight: 300;
-  letter-spacing: -0.75px;
-  color: #fff;
+.depth2 >li>a{
+    position: relative;
+    display: block;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: -0.75px;
+    color: #fff;
 }
 /* 상단 */
 .header {
@@ -143,6 +144,9 @@ body {
 }
 .language-box {
   padding-top: 25px;
+}
+.language-word {
+  position: relative;
   display: block;
   padding-right: 22px;
   font-size: 16px;
@@ -154,7 +158,7 @@ body {
 .language-word::after {
   content: "";
   display: inline-block;
-  background: url(../images/select_icon2.png) no-repeat;
+  background: url("../images/select_icon2.png") no-repeat;
   background-size: cover;
   width: 8px;
   height: 7px;
@@ -162,10 +166,10 @@ body {
   right: 0;
   top: 6px;
 }
-.languag {
+.language {
   visibility: hidden;
 }
-.languag li {
+.language li {
   transform: translateY(-10px);
   opacity: 0;
   visibility: hidden;
